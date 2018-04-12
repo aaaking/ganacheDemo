@@ -15,3 +15,13 @@ truffle migrate
 truffle test
 
 truffle develop //进入控制台
+
+
+编译项目
+$ truffle compile //编译项目
+部署项目
+部署之前先启动TestRPC $ testrpc
+
+$ truffle deploy
+启动服务
+$ truffle serve
