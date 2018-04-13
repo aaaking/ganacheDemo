@@ -31,3 +31,27 @@ $ truffle deploy
 $ truffle serve
 
 web3.eth.coinbase
+
+开始测试，输入truffle console打开truffle控制台，测试刚才我们部署的HelloWorld合约：
+
+yuyangdeMacBook-Pro:TestTruffle yuyang$ truffle console
+truffle(development)> var contract
+undefined
+truffle(development)> HelloWorld.deployed().then(function(instance){contract= instance;});
+undefined
+truffle(development)> contract.say()
+'Hello World'
+truffle(development)> contract.print("Hello World!")
+'Hello World!'
+
+One thing to check would be the network ID. It doesn't matter what network ID you use for your local test node, but Truffle needs to agree about what you're using with testrpc.
+
+With testrpc running, do: 
+
+curl -X POST --data '{"jsonrpc":"2.0","method":"net_version","params":[]}' http://localhost:8545
+
+This should tell you the network ID that testrpc is using; Recent versions seem to be using what looks like a timestamp from when it was started.
+
+Then take a look in the contract definition files under truffle/build/contracts and see if they have the same network ID specified as the key in the networks section. If they don't, you might want to try specifying the network ID in your truffle.js and redeploying. (By default this uses "*", which should work it out automatically, but I've had problems with it occasionally for reasons I never got to the bottom of.) Superstitiously, I would also delete the contents of the build directory and run truffle deploy again.
+
+If this turns out to be the problem, you can force testrpc to use the same network ID every time by running it with the --network-id flag, eg to use the network ID 1337 you would run testrpc --network-id 1337.

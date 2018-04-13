@@ -1,5 +1,6 @@
 var Migrations = artifacts.require("./Migrations.sol");
-
-module.exports = function(deployer) {
-  deployer.deploy(Migrations);
+var HelloWorld = artifacts.require("./HelloWorld.sol")
+module.exports = function (deployer) {
+    deployer.deploy(Migrations);
+    deployer.deploy(HelloWorld);
 };
