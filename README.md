@@ -29,3 +29,5 @@ $ truffle compile //编译项目
 $ truffle deploy
 启动服务
 $ truffle serve
+
+web3.eth.coinbase
