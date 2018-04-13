@@ -10,9 +10,13 @@
 
 truffle ubox metacoin //创建项目
 
-truffle compile
-truffle migrate
-truffle test
+Compile:              truffle compile
+Migrate:              truffle migrate
+Test contracts:       truffle test
+Run linter:           npm run lint
+Run dev server:       npm run dev
+Build for production: npm run build
+
 
 truffle develop //进入控制台
 
