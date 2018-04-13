@@ -32,6 +32,10 @@ $ truffle serve
 
 web3.eth.coinbase
 
+默认的函数参数，包括返回的参数，他们是memory。默认的局部变量是storage的。而默认的状态变量（合约声明的公有变量）是storage。
+
+另外还有第三个存储位置calldata。它存储的是函数参数，是只读的，不会永久存储的一个数据位置。外部函数的参数（不包括返回参数）被强制指定为calldata。效果与memory差不多。
+
 开始测试，输入truffle console打开truffle控制台，测试刚才我们部署的HelloWorld合约：
 
 yuyangdeMacBook-Pro:TestTruffle yuyang$ truffle console
