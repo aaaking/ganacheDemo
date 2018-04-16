@@ -2,7 +2,7 @@ pragma solidity ^0.4.17;
 
 contract HelloWorld {
     function say() public pure returns (string) {
-        return "Hel22";
+        return "Hel";
     }
 
     //
