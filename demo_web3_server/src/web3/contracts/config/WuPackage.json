@@ -1,0 +1,768 @@
+{
+  "contractName": "WuPackage",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "cate",
+          "type": "uint32"
+        }
+      ],
+      "name": "exists",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "cate",
+          "type": "uint32"
+        }
+      ],
+      "name": "drawCardWithCate",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "packageType",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "unpause",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "_ctrl",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "cardRemainNum",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "paused",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "drawCardWithIndex",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint32"
+        },
+        {
+          "name": "",
+          "type": "uint32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "cate",
+          "type": "uint32"
+        }
+      ],
+      "name": "cardIndex",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "cardCate",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "pos",
+          "type": "uint256"
+        }
+      ],
+      "name": "indexAtPos",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "pause",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "cardDrawedNum",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "cardCateNum",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "newCtrl",
+          "type": "address"
+        }
+      ],
+      "name": "transferCtrlShip",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "previousCtrl",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "newCtrl",
+          "type": "address"
+        }
+      ],
+      "name": "CtrlshipTransferred",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [],
+      "name": "Pause",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [],
+      "name": "Unpause",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "packageCamp",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.4.21;\n\nimport './Package.sol';\n\ncontract WuPackage is Package {\n    uint internal _camp = 3;\n\n    function packageCamp() external view returns(uint) {\n        return _camp;\n    }\n}",
+  "sourcePath": "/Users/fq/work/blockchain/mjz_contract/contracts/Package/WuPackage.sol",
+  "ast": {
+    "absolutePath": "/Users/fq/work/blockchain/mjz_contract/contracts/Package/WuPackage.sol",
+    "exportedSymbols": {
+      "WuPackage": [
+        7700
+      ]
+    },
+    "id": 7701,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7685,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".21"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:32"
+      },
+      {
+        "absolutePath": "/Users/fq/work/blockchain/mjz_contract/contracts/Package/Package.sol",
+        "file": "./Package.sol",
+        "id": 7686,
+        "nodeType": "ImportDirective",
+        "scope": 7701,
+        "sourceUnit": 7616,
+        "src": "26:23:32",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": [],
+            "baseName": {
+              "contractScope": null,
+              "id": 7687,
+              "name": "Package",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 7615,
+              "src": "73:7:32",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Package_$7615",
+                "typeString": "contract Package"
+              }
+            },
+            "id": 7688,
+            "nodeType": "InheritanceSpecifier",
+            "src": "73:7:32"
+          }
+        ],
+        "contractDependencies": [
+          3118,
+          3174,
+          3242,
+          7615
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 7700,
+        "linearizedBaseContracts": [
+          7700,
+          7615,
+          3118,
+          3242,
+          3174
+        ],
+        "name": "WuPackage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 7691,
+            "name": "_camp",
+            "nodeType": "VariableDeclaration",
+            "scope": 7700,
+            "src": "87:23:32",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 7689,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "87:4:32",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "33",
+              "id": 7690,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "109:1:32",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_3_by_1",
+                "typeString": "int_const 3"
+              },
+              "value": "3"
+            },
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 7698,
+              "nodeType": "Block",
+              "src": "168:29:32",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 7696,
+                    "name": "_camp",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 7691,
+                    "src": "185:5:32",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 7695,
+                  "id": 7697,
+                  "nodeType": "Return",
+                  "src": "178:12:32"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 7699,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "packageCamp",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7692,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "137:2:32"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 7695,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7694,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7699,
+                  "src": "162:4:32",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7693,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "162:4:32",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "161:6:32"
+            },
+            "scope": 7700,
+            "src": "117:80:32",
+            "stateMutability": "view",
+            "superFunction": 7567,
+            "visibility": "external"
+          }
+        ],
+        "scope": 7701,
+        "src": "51:148:32"
+      }
+    ],
+    "src": "0:199:32"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/fq/work/blockchain/mjz_contract/contracts/Package/WuPackage.sol",
+    "exportedSymbols": {
+      "WuPackage": [
+        7700
+      ]
+    },
+    "id": 7701,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7685,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".21"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:32"
+      },
+      {
+        "absolutePath": "/Users/fq/work/blockchain/mjz_contract/contracts/Package/Package.sol",
+        "file": "./Package.sol",
+        "id": 7686,
+        "nodeType": "ImportDirective",
+        "scope": 7701,
+        "sourceUnit": 7616,
+        "src": "26:23:32",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": [],
+            "baseName": {
+              "contractScope": null,
+              "id": 7687,
+              "name": "Package",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 7615,
+              "src": "73:7:32",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Package_$7615",
+                "typeString": "contract Package"
+              }
+            },
+            "id": 7688,
+            "nodeType": "InheritanceSpecifier",
+            "src": "73:7:32"
+          }
+        ],
+        "contractDependencies": [
+          3118,
+          3174,
+          3242,
+          7615
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 7700,
+        "linearizedBaseContracts": [
+          7700,
+          7615,
+          3118,
+          3242,
+          3174
+        ],
+        "name": "WuPackage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 7691,
+            "name": "_camp",
+            "nodeType": "VariableDeclaration",
+            "scope": 7700,
+            "src": "87:23:32",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 7689,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "87:4:32",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "33",
+              "id": 7690,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "109:1:32",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_3_by_1",
+                "typeString": "int_const 3"
+              },
+              "value": "3"
+            },
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 7698,
+              "nodeType": "Block",
+              "src": "168:29:32",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 7696,
+                    "name": "_camp",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 7691,
+                    "src": "185:5:32",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 7695,
+                  "id": 7697,
+                  "nodeType": "Return",
+                  "src": "178:12:32"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 7699,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "packageCamp",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7692,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "137:2:32"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 7695,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7694,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7699,
+                  "src": "162:4:32",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7693,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "162:4:32",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "161:6:32"
+            },
+            "scope": 7700,
+            "src": "117:80:32",
+            "stateMutability": "view",
+            "superFunction": 7567,
+            "visibility": "external"
+          }
+        ],
+        "scope": 7701,
+        "src": "51:148:32"
+      }
+    ],
+    "src": "0:199:32"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.21+commit.dfe3193c.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-05-12T08:22:41.669Z"
+}

@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "redis": "^2.8.0",
+    "web3": "0.19.0"
+  },
+  "name": "mjz_web3",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "export NODE_ENV=development&&node ./test/test.js ",
+    "publish": "nohup node ./src/app.js 1>log/debug.log 2>log/error.log & echo $! > node.pid",
+    "start": "node ./src/app.js"
+  },
+  "author": "Feng Qiang",
+  "license": "ISC",
+  "description": ""
+}

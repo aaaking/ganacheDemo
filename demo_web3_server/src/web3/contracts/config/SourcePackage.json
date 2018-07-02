@@ -1,0 +1,768 @@
+{
+  "contractName": "SourcePackage",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "cate",
+          "type": "uint32"
+        }
+      ],
+      "name": "exists",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "cate",
+          "type": "uint32"
+        }
+      ],
+      "name": "drawCardWithCate",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "unpause",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "_ctrl",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "packageCamp",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "cardRemainNum",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "paused",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "drawCardWithIndex",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint32"
+        },
+        {
+          "name": "",
+          "type": "uint32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "cate",
+          "type": "uint32"
+        }
+      ],
+      "name": "cardIndex",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "cardCate",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint32"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "pos",
+          "type": "uint256"
+        }
+      ],
+      "name": "indexAtPos",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "pause",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "cardDrawedNum",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "cardCateNum",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "newCtrl",
+          "type": "address"
+        }
+      ],
+      "name": "transferCtrlShip",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "previousCtrl",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "newCtrl",
+          "type": "address"
+        }
+      ],
+      "name": "CtrlshipTransferred",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [],
+      "name": "Pause",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [],
+      "name": "Unpause",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "packageType",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.4.21;\n\nimport \"./Package.sol\";\n\ncontract SourcePackage is Package {\n\n    uint internal _packageType = 1;\n\n    function packageType() external view returns(uint) {\n        return _packageType;\n    }\n}",
+  "sourcePath": "/Users/fq/work/blockchain/mjz_contract/contracts/Package/SourcePackage.sol",
+  "ast": {
+    "absolutePath": "/Users/fq/work/blockchain/mjz_contract/contracts/Package/SourcePackage.sol",
+    "exportedSymbols": {
+      "SourcePackage": [
+        7666
+      ]
+    },
+    "id": 7667,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7651,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".21"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:30"
+      },
+      {
+        "absolutePath": "/Users/fq/work/blockchain/mjz_contract/contracts/Package/Package.sol",
+        "file": "./Package.sol",
+        "id": 7652,
+        "nodeType": "ImportDirective",
+        "scope": 7667,
+        "sourceUnit": 7616,
+        "src": "26:23:30",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": [],
+            "baseName": {
+              "contractScope": null,
+              "id": 7653,
+              "name": "Package",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 7615,
+              "src": "77:7:30",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Package_$7615",
+                "typeString": "contract Package"
+              }
+            },
+            "id": 7654,
+            "nodeType": "InheritanceSpecifier",
+            "src": "77:7:30"
+          }
+        ],
+        "contractDependencies": [
+          3118,
+          3174,
+          3242,
+          7615
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 7666,
+        "linearizedBaseContracts": [
+          7666,
+          7615,
+          3118,
+          3242,
+          3174
+        ],
+        "name": "SourcePackage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 7657,
+            "name": "_packageType",
+            "nodeType": "VariableDeclaration",
+            "scope": 7666,
+            "src": "92:30:30",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 7655,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "92:4:30",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "31",
+              "id": 7656,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "121:1:30",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_1_by_1",
+                "typeString": "int_const 1"
+              },
+              "value": "1"
+            },
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 7664,
+              "nodeType": "Block",
+              "src": "180:36:30",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 7662,
+                    "name": "_packageType",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 7657,
+                    "src": "197:12:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 7661,
+                  "id": 7663,
+                  "nodeType": "Return",
+                  "src": "190:19:30"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 7665,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "packageType",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7658,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "149:2:30"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 7661,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7660,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7665,
+                  "src": "174:4:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7659,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "174:4:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "173:6:30"
+            },
+            "scope": 7666,
+            "src": "129:87:30",
+            "stateMutability": "view",
+            "superFunction": 7562,
+            "visibility": "external"
+          }
+        ],
+        "scope": 7667,
+        "src": "51:167:30"
+      }
+    ],
+    "src": "0:218:30"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/fq/work/blockchain/mjz_contract/contracts/Package/SourcePackage.sol",
+    "exportedSymbols": {
+      "SourcePackage": [
+        7666
+      ]
+    },
+    "id": 7667,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7651,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".21"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:30"
+      },
+      {
+        "absolutePath": "/Users/fq/work/blockchain/mjz_contract/contracts/Package/Package.sol",
+        "file": "./Package.sol",
+        "id": 7652,
+        "nodeType": "ImportDirective",
+        "scope": 7667,
+        "sourceUnit": 7616,
+        "src": "26:23:30",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": [],
+            "baseName": {
+              "contractScope": null,
+              "id": 7653,
+              "name": "Package",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 7615,
+              "src": "77:7:30",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Package_$7615",
+                "typeString": "contract Package"
+              }
+            },
+            "id": 7654,
+            "nodeType": "InheritanceSpecifier",
+            "src": "77:7:30"
+          }
+        ],
+        "contractDependencies": [
+          3118,
+          3174,
+          3242,
+          7615
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 7666,
+        "linearizedBaseContracts": [
+          7666,
+          7615,
+          3118,
+          3242,
+          3174
+        ],
+        "name": "SourcePackage",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 7657,
+            "name": "_packageType",
+            "nodeType": "VariableDeclaration",
+            "scope": 7666,
+            "src": "92:30:30",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 7655,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "92:4:30",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "31",
+              "id": 7656,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "121:1:30",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_1_by_1",
+                "typeString": "int_const 1"
+              },
+              "value": "1"
+            },
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 7664,
+              "nodeType": "Block",
+              "src": "180:36:30",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 7662,
+                    "name": "_packageType",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 7657,
+                    "src": "197:12:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 7661,
+                  "id": 7663,
+                  "nodeType": "Return",
+                  "src": "190:19:30"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 7665,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "packageType",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7658,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "149:2:30"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 7661,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7660,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7665,
+                  "src": "174:4:30",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7659,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "174:4:30",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "173:6:30"
+            },
+            "scope": 7666,
+            "src": "129:87:30",
+            "stateMutability": "view",
+            "superFunction": 7562,
+            "visibility": "external"
+          }
+        ],
+        "scope": 7667,
+        "src": "51:167:30"
+      }
+    ],
+    "src": "0:218:30"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.21+commit.dfe3193c.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-05-12T08:22:41.669Z"
+}

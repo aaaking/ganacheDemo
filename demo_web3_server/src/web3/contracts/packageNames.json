@@ -1,0 +1,10 @@
+{
+    "PackageNames":[
+        [
+            ["BasicSource1","BasicSource2","BasicSource3","BasicSource4"]
+        ],
+        [
+            ["BasicComp1","BasicComp2","BasicComp3","BasicComp4"]
+        ]
+    ]
+}
