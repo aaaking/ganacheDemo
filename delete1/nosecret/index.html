@@ -155,7 +155,7 @@
             $('#content').text("正文:  " + result.content);
             $('#author').text("作者：" + result.author);
             var date = new Date(result.timestamp)
-            $('#timestamp').text("日期：" + date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate());
+            $('#timestamp').text("日期：" + date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate() + "  " + date.getHours() + ":" + date.getMinutes());
         }).catch(function (err) {
             console.log("error :" + err.message);
         })

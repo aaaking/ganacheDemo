@@ -13,8 +13,8 @@ var SecretItem = function (text) {
         this.title = obj.title
         this.content = obj.content
         this.author = obj.author
-        this.timestamp = new Date().getTime()
     }
+    this.timestamp = new Date().getTime()
 }
 
 SecretItem.prototype = {
