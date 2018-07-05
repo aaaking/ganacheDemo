@@ -53,14 +53,15 @@
                 <h1 id=title></h1>
             </div>
             <div id=content style="margin-left:20px"></div>
-            <div id=author style="text-align: right"></div>
+            <div id=author style="text-align: right; font-style: italic"></div>
+            <div id="timestamp" style="text-align: right; font-style: italic"></div>
 
             <div class="container-fluid">
                 <div class="row-fluid">
                     <div class="span12">
                         <span class="label">分隔符</span>
                         <div class="list-group">
-                            <a class="list-group-item active">立即发布</a>
+                            <a class="list-group-item active">发表秘密</a>
                         </div>
                     </div>
                 </div>
@@ -75,7 +76,7 @@
                 <input type="text" class="form-control" placeholder="输入正文" id=input_content>
             </div>
             <div style="text-align: right;margin-top:20px ">
-                <button class="btn btn-info" id=post>提交</button>
+                <button class="btn btn-info" id=post>发表</button>
             </div>
 
 
@@ -85,7 +86,7 @@
 <script>
     "use strict";
     var enableDebug = true;
-    var dappContactAddress = "n1ktDUiZ5ry4fTUWdq8F2dB2ppogWeMAiQe";
+    var dappContactAddress = "n1iBF1TohLcSaRghKCDjSmD4QzwBpmummfU";
     var NebPay = require("nebpay")
     var nebPay = new NebPay()
     var serialNumber
@@ -135,18 +136,26 @@
         }
         var numberDel = neb.api.call(from, dappContactAddress, value, nonce, gas_price, gas_limit, contract).then(function (resp) {
             console.log(numberDel)
-            var result = resp.result;
+            console.log(resp)
+            var result = JSON.parse(resp.result);
             if (result === 'null') {
                 $('#content').text("没有发现该标题秘密，你可以立即写一篇！");
                 $('#title').text("");
                 $('#author').text("");
                 return;
             }
-            console.log(result);
-            result = JSON.parse(result);
+            // for (var i = 0; i < result.size; i++) {
+            //     var item = result[i]
+            //     $('#content').text("title:  " + item.title + "</br>");
+            //     $('#content').text("content:  " + item.content + "</br>");
+            //     $('#content').text("author:  " + item.author + "</br>");
+            //     $('#content').text("timestamp:  " + item.timestamp + "</br></br>");
+            // }
             $("#title").text(result.title);
             $('#content').text("正文:  " + result.content);
             $('#author').text("作者：" + result.author);
+            var date = new Date(result.timestamp)
+            $('#timestamp').text("日期：" + date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate());
         }).catch(function (err) {
             console.log("error :" + err.message);
         })
