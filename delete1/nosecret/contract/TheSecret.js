@@ -7,6 +7,13 @@
 // 0: 交易失败. 表示当前交易已经上链，但是执行失败了。可能是因为部署合约或者调用合约参数错误。
 // 1: 交易成功. 表示当前交易已经上链，而且执行成功了。
 // 2: 交易待定. 表示当前交易还没有上链。可能是因为当前交易还没有被打包；如果长时间处于当前状态，可能是因为当前交易的发送者账户的余额不够支付上链手续费。
+
+// I think Nebulas describes a new blockchain world with three key features:
+// Value Ranking: Nebulas Rank (NR) provides a measure of value for every unit in the blockchain.
+// Self-evolving: Nebulas Force (NF) enables Nebulas to respond to new demands without forks.
+// Native Incentive: Nebulas Incentive (NI) rewards developers and virtuous users who devotes.
+// I view Nebulas as a living blockchain. It’s just like a little boy; observing this novel world with his sparkling eyes (NR), 
+// showing his lovely smile to people who care for him (NI) and growing up surrounded by tender loving care everyday (NF).
 var SecretItem = function (text) {
     if (text) {
         var obj = JSON.parse(text);
@@ -26,6 +33,11 @@ SecretItem.prototype = {
 // 其次，我们应该可以有权限访问我们自己智能合约的存储空间，所以根据官方的API来创建存储空间：
 // 这里的数据是以kep-value形式存储的。相信大家很容易理解。
 var TheSecret = function () {
+    LocalContractStorage.defineMapProperty(this, "userMap");
+    LocalContractStorage.defineMapProperties(this, {
+        key1Map: null,
+        key2Map: null
+    });
     LocalContractStorage.defineMapProperty(this, "data", {
         parse: function (text) {
             return new SecretItem(text)
@@ -33,13 +45,32 @@ var TheSecret = function () {
         stringify: function (o) {
             return o.toString()
         }
-    })
+    });
+    // 因为传值为 'null'，将会使用默认的 descriptor实现（序列化方法）
+    LocalContractStorage.defineProperty(this, "name1", null);
+    // 一个自定义的 `descriptor` 实现
+    // 在解析的时候返回 BigNumber 对象
+    LocalContractStorage.defineProperty(this, "value1", {
+        stringify: function (obj) {
+            return obj.toString();
+        },
+        parse: function (str) {
+            return new BigNumber(str);
+        }
+    });
+    // 用默认的序列化实现批量绑定
+    LocalContractStorage.defineProperties(this, {
+        name2: null,
+        value2: null
+    });
 }
 
 // 接下来，只需要再编写两个函数，一个是存储秘密，一个是查询秘密，逻辑比较简单，直接贴代码：
 TheSecret.prototype = {
     init: function () {
-
+        console.log('init: Blockchain.block.timestamp = ' + Blockchain.block.timestamp);
+        console.log('init: Blockchain.block.height = ' + Blockchain.block.height);
+        console.log('init: Blockchain.transaction.from = ' + Blockchain.transaction.from);
     },
     save: function (title, content) {
         if (!title || !content) {
@@ -75,6 +106,30 @@ TheSecret.prototype = {
         // return result
         return this.data.get(title)
         // return this.data
+    },
+
+    //test
+    transfer: function (address, value) {
+        var result = Blockchain.transfer(address, value);
+        console.log("transfer result:", result);
+    },
+    verifyAddress: function (address) {
+        var result = Blockchain.verifyAddress(address);
+        console.log("verifyAddress result:", result);
+    },
+    // Event 模块用来记录在合约执行过程中产生的事件。被记录的事件存储在链上的事件Trie结构中，可以通过事件查询方法
+    // [rpc.getEventsByHash](https://github.com/nebulasio/wiki/blob/master/rpc.md#geteventsbyhash) 获取所有事件。
+    // 通过`Event`模块输出的事件其最终Topic由用户自定义topic加固定前缀 chain.contract. 两部分构成 。使用方法如下：
+    // Event.Trigger(topic, obj);
+    // · topic：用户定义的topic
+    // · obj：JSON 对象
+    testEvent: function () {
+        // 实际被存储的topic是“chain.contract.topic”
+        Event.Trigger("topic", {
+            Data: {
+                value: "Event test."
+            }
+        });
     }
 }
 module.exports = TheSecret
