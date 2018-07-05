@@ -8,3 +8,28 @@
 
 # ./neb account new
 # n1WU5PThmwgbuHFVopJG8cwf2EUB1FdSsxh -- Zzh6
+
+# n1b1Ez9tpZStgnKfC17ME5T1PQBXshn6j9f -- Zzh6
+
+curl -i -H 'Content-Type: application/json' -X POST http://localhost:8685/v1/admin/account/unlock -d '{"address":"n1WU5PThmwgbuHFVopJG8cwf2EUB1FdSsxh","passphrase":"passphrase","duration":"1000000000"}'
+curl -i -H 'Content-Type: application/json' -X POST http://localhost:8685/v1/admin/account/lock -d '{"address":"n1WU5PThmwgbuHFVopJG8cwf2EUB1FdSsxh"}'
+
+curl -i -H Accept:application/json -X POST http://localhost:8685/v1/user/accountstate -d '{"address":"n1WU5PThmwgbuHFVopJG8cwf2EUB1FdSsxh"}'
+curl -i -H 'Content-Type: application/json' -X POST http://localhost:8685/v1/user/accountstate -d '{"address":"n1WU5PThmwgbuHFVopJG8cwf2EUB1FdSsxh"}'
+
+# 签名 & 发送
+curl -i -H 'Content-Type: application/json' -X POST http://localhost:8685/v1/admin/sign -d '{"transaction":{"from":"n1FF1nz6tarkDVwWQkMnnwFPuPKUaQTdptE","to":"n1WU5PThmwgbuHFVopJG8cwf2EUB1FdSsxh", "value":"1000000000000000000","nonce":1,"gasPrice":"1000000","gasLimit":"2000000"}, "passphrase":"passphrase"}'
+然后，我们将签好名的交易原始数据提交到本地私有链里的星云节点。
+curl -i -H 'Content-Type: application/json' -X POST http://localhost:8685/v1/user/rawtransaction -d '{"data":"CiAbjMP5dyVsTWILfXL1MbwZ8Q6xOgX/JKinks1dpToSdxIaGVcH+WT/SVMkY18ix7SG4F1+Z8evXJoA35caGhlXbip8PupTNxwV4SRM87r798jXWADXpWngIhAAAAAAAAAAAA3gtrOnZAAAKAEwuKuC1wU6CAoGYmluYXJ5QGRKEAAAAAAAAAAAAAAAAAAPQkBSEAAAAAAAAAAAAAAAAAAehIBYAWJBVVuRHWSNY1e3bigbVKd9i6ci4f1LruDC7AUtXDLirHlsmTDZXqjSMGLio1ziTmxYJiLj+Jht5RoZxFKqFncOIQA="}'
+{"result":{"txhash":"1b8cc3f977256c4d620b7d72f531bc19f10eb13a05ff24a8a792cd5da53a1277","contract_address":""}}
+
+# 密码 & 发送
+curl -i -H 'Content-Type: application/json' -X POST http://localhost:8685/v1/admin/transactionWithPassphrase -d '{"transaction":{"from":"n1FF1nz6tarkDVwWQkMnnwFPuPKUaQTdptE","to":"n1WU5PThmwgbuHFVopJG8cwf2EUB1FdSsxh", "value":"1000000000000000000","nonce":2,"gasPrice":"1000000","gasLimit":"2000000"},"passphrase":"passphrase"}'
+
+# 解锁 & 发送
+curl -i -H 'Content-Type: application/json' -X POST http://localhost:8685/v1/admin/account/unlock -d '{"address":"n1WU5PThmwgbuHFVopJG8cwf2EUB1FdSsxh","passphrase":"passphrase","duration":"100000000000"}'
+curl -i -H 'Content-Type: application/json' -X POST http://localhost:8685/v1/admin/transaction -d '{"from":"n1FF1nz6tarkDVwWQkMnnwFPuPKUaQTdptE","to":"n1WU5PThmwgbuHFVopJG8cwf2EUB1FdSsxh", "value":"1000000000000000000","nonce":3,"gasPrice":"1000000","gasLimit":"2000000"}'
+
+# 交易收据
+curl -i -H Accept:application/json -X POST http://localhost:8685/v1/user/getTransactionReceipt -d '{"hash":"939ac2fd510de60a05a590e335ac4d3e75393aa093c2762ee521eaa4040368d3"}'
+
