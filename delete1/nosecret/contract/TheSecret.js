@@ -14,6 +14,11 @@
 // Native Incentive: Nebulas Incentive (NI) rewards developers and virtuous users who devotes.
 // I view Nebulas as a living blockchain. It’s just like a little boy; observing this novel world with his sparkling eyes (NR), 
 // showing his lovely smile to people who care for him (NI) and growing up surrounded by tender loving care everyday (NF).
+
+// In Nebulas, we have three kinds of transactions: binary, deploy and call.
+// 1 Binary transactions are used to transfer tokens between accounts.
+// 2 Deploy transactions are used to deploy a smart contract.
+// 3 Call transactions are used to call functions in a deployed smart contract.
 var SecretItem = function (text) {
     if (text) {
         var obj = JSON.parse(text);
@@ -104,7 +109,7 @@ TheSecret.prototype = {
             }
         }
         // return result
-        return this.data.get(title)
+        return this.data.get(title)//遍历map重新做
         // return this.data
     },
 
