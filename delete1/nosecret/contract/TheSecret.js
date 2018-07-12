@@ -3,6 +3,7 @@
 // d387cb867418f58e91e02434de09baad16e57f62d9e9784e4e20d2a4993772a7 n1z3WVpvAUSAZ8wn9RdhF9GZZjA1XDFbnHy array
 // 923075906527db6b7e5e45366d9a786d9fca5c986a81f8bf08c781aa5289f977 n1j3NVZXEk3gga6asNNo2WuVJ9GANXuTUYx data
 // 79d90b6e4827662e5dfdddd7012a6cd6f7cd5d8bf88453205d2461d7f16ad704 n1nHuZZXoEdfSrdMAXk1unajN5JGX58PdZZ array without filter which means all data
+// 910e8ec225f2ccb45d35ce92a6bc8bd8e55ad8ff390b9d5d493726014343569d n21Kv69NcP1Az4Vm75673J1MG5zTScxjRZ9
 // 这里的status可能有三种状态值，0，1和2。
 // 0: 交易失败. 表示当前交易已经上链，但是执行失败了。可能是因为部署合约或者调用合约参数错误。
 // 1: 交易成功. 表示当前交易已经上链，而且执行成功了。
@@ -22,11 +23,12 @@
 var SecretItem = function (text) {
     if (text) {
         var obj = JSON.parse(text);
-        this.title = obj.title
-        this.content = obj.content
-        this.author = obj.author
+        this.title = obj && obj.title || ""
+        this.content = obj && obj.content || ""
+        this.author = obj && obj.author || ""
+        this.index = obj && obj.index || 0
+        this.timestamp = obj && obj.timestamp || new Date().getTime()
     }
-    this.timestamp = new Date().getTime()
 }
 
 SecretItem.prototype = {
@@ -40,9 +42,9 @@ SecretItem.prototype = {
 var TheSecret = function () {
     LocalContractStorage.defineMapProperty(this, "userMap");
     LocalContractStorage.defineMapProperties(this, {
-        key1Map: null,
-        key2Map: null
+        arrayMap: null
     });
+    LocalContractStorage.defineProperty(this, "size");
     LocalContractStorage.defineMapProperty(this, "data", {
         parse: function (text) {
             return new SecretItem(text)
@@ -51,8 +53,6 @@ var TheSecret = function () {
             return o.toString()
         }
     });
-    // 因为传值为 'null'，将会使用默认的 descriptor实现（序列化方法）
-    LocalContractStorage.defineProperty(this, "name1", null);
     // 一个自定义的 `descriptor` 实现
     // 在解析的时候返回 BigNumber 对象
     LocalContractStorage.defineProperty(this, "value1", {
@@ -75,9 +75,9 @@ TheSecret.prototype = {
     init: function () {
         console.log('init: Blockchain.block.timestamp = ' + Blockchain.block.timestamp);
         console.log('init: Blockchain.block.height = ' + Blockchain.block.height);
-        console.log('init: Blockchain.transaction.from = ' + Blockchain.transaction.from);
+        this.size = 0;
     },
-    save: function (title, content) {
+    set: function (title, content) {
         if (!title || !content) {
             throw new Error("empty title or content")
         }
@@ -89,28 +89,96 @@ TheSecret.prototype = {
         if (secretItem) {
             throw new Error("secret has been occupied")
         }
+        var index = this.size;
+        this.arrayMap.set(index, title);
         secretItem = new SecretItem()
         secretItem.author = from;
         secretItem.title = title
         secretItem.content = content
+        secretItem.index = index
+        secretItem.timestamp = new Date().getTime()
         this.data.put(title, secretItem)
+        this.size += 1;
     },
     get: function (title) {
         if (!title) {
-            throw new Error("empty title")
+            return []
         }
         var result = []
-        for (var key in this.data) {
-            // if (this.data.get(key) && this.data.get(key).search(title)) {
-            //     result.push(this.data.get(key))
-            // }
-            if (this.data.get(key)) {
-                result.push(this.data.get(key))
+        result.push(this.data.get(title))
+        return result
+    },
+    getSimilar: function (titleP) {
+        var title = titleP.replace(/(^\s*)|(\s*$)/g, "")
+        if (!title) {
+            return []
+        }
+        var result = []
+        for (var i = 0; i < this.size; i++) {
+            var key = this.arrayMap.get(i);
+            var obj = this.data.get(key)
+            if (
+                (key && key.toString().search(new RegExp(title + "")) > -1)
+                || (obj && obj.toString().search(new RegExp(title + "")) > -1)
+            ) {
+                result.push(obj)
             }
         }
-        // return result
-        return this.data.get(title)//遍历map重新做
-        // return this.data
+        return result
+    },
+    getSimilarTitle: function (titleP) {
+        var title = titleP.replace(/(^\s*)|(\s*$)/g, "")
+        if (!title) {
+            return []
+        }
+        var result = []
+        for (var i = 0; i < this.size; i++) {
+            var key = this.arrayMap.get(i);
+            var obj = this.data.get(key)
+            if (key && key.toString().search(new RegExp(title + "")) > -1) {
+                result.push(obj)
+            }
+        }
+        return result
+    },
+    getSimilarContent: function (titleP) {
+        var title = titleP.replace(/(^\s*)|(\s*$)/g, "")
+        if (!title) {
+            return []
+        }
+        var result = []
+        for (var i = 0; i < this.size; i++) {
+            var key = this.arrayMap.get(i);
+            var obj = this.data.get(key)
+            if (obj && obj.toString().search(new RegExp(title + "")) > -1) {
+                result.push(obj)
+            }
+        }
+        return result
+    },
+    del: function () {
+
+    },
+    len: function () {
+        return this.size;
+    },
+    getAll: function (limit, offset) {
+        limit = parseInt(limit) || this.size;
+        offset = parseInt(offset) || 0;
+        if (offset > this.size) {
+            throw new Error("offset is not valid");
+        }
+        var number = offset + limit;
+        if (number > this.size) {
+            number = this.size;
+        }
+        var result = [];
+        for (var i = offset; i < number; i++) {
+            var key = this.arrayMap.get(i);
+            var object = this.data.get(key);
+            result.push(object)
+        }
+        return result;
     },
 
     //test
