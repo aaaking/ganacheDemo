@@ -68,15 +68,11 @@ function getAccountStatus(account, callback) {
         json: true,
         body: { "address": account }
     };
-
     request(options, (err, response, body) => {
         console.assert(err == null, err);
         console.log("account status:", body);
-
         nonce = parseInt(body.result.nonce) + 1;
-
         console.log('nonce: ' + nonce);
-
         callback();
     });
 }
