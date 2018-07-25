@@ -1,5 +1,6 @@
 /**
 * name 
+Browser.window.open("https://github.com/ChengOrangeJu/WebExtensionWallet");
 */
 module net {
 	export class SocketIO {
