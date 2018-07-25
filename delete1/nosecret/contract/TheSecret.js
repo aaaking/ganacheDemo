@@ -191,7 +191,8 @@ TheSecret.prototype = {
         console.log("verifyAddress result:", result);
     },
     testError: function () {
-        throw new Error(JSON.stringify({code: 1, msg: "errorMsg"}));
+        // throw new Error(JSON.stringify({code: 1, msg: "errorMsg"}));
+        AssertThrow(1 > 2, {"code":"1", "msg":"sfdf"})
     },
     // Event 模块用来记录在合约执行过程中产生的事件。被记录的事件存储在链上的事件Trie结构中，可以通过事件查询方法
     // [rpc.getEventsByHash](https://github.com/nebulasio/wiki/blob/master/rpc.md#geteventsbyhash) 获取所有事件。
@@ -208,4 +209,12 @@ TheSecret.prototype = {
         });
     }
 }
+
+function AssertThrow(condition, msg) {
+    if (!condition) {
+        console.warn(arguments);
+        throw new Error(JSON.stringify(arguments));
+    }
+}
+
 module.exports = TheSecret
