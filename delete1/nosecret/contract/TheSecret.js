@@ -190,6 +190,9 @@ TheSecret.prototype = {
         var result = Blockchain.verifyAddress(address);
         console.log("verifyAddress result:", result);
     },
+    testError: function () {
+        throw new Error(JSON.stringify({code: 1, msg: "errorMsg"}));
+    },
     // Event 模块用来记录在合约执行过程中产生的事件。被记录的事件存储在链上的事件Trie结构中，可以通过事件查询方法
     // [rpc.getEventsByHash](https://github.com/nebulasio/wiki/blob/master/rpc.md#geteventsbyhash) 获取所有事件。
     // 通过`Event`模块输出的事件其最终Topic由用户自定义topic加固定前缀 chain.contract. 两部分构成 。使用方法如下：

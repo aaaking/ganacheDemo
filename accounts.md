@@ -35,7 +35,7 @@ curl -i -H 'Content-Type: application/json' -X POST http://localhost:8685/v1/adm
 curl -i -H 'Content-Type: application/json' -X POST http://localhost:8685/v1/admin/transaction -d '{"from":"n1FF1nz6tarkDVwWQkMnnwFPuPKUaQTdptE","to":"n1WU5PThmwgbuHFVopJG8cwf2EUB1FdSsxh", "value":"1000000000000000000","nonce":3,"gasPrice":"1000000","gasLimit":"2000000"}'
 
 # 交易收据
-curl -i -H Accept:application/json -X POST http://localhost:8685/v1/user/getTransactionReceipt -d '{"hash":"939ac2fd510de60a05a590e335ac4d3e75393aa093c2762ee521eaa4040368d3"}'
+curl -i -H Accept:application/json -X POST https://testnet.nebulas.io/v1/user/getTransactionReceipt -d '{"hash":"045c02490e09d61c324cac909a4af78ab9e6ff3421daa239d7bd7a8ab8c8502b"}'
 
 # getEventsByHash
 curl -i -H 'Content-Type: application/json' -X POST https://testnet.nebulas.io/v1/user/getEventsByHash -d '{"hash":"c4547e5569fc8152fe01663253cfa8beb3c4898cd7b071456853f89282386c40"}'
