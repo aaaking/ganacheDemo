@@ -27,7 +27,7 @@ curl -i -H 'Content-Type: application/json' -X POST http://localhost:8685/v1/use
 {"result":{"txhash":"1b8cc3f977256c4d620b7d72f531bc19f10eb13a05ff24a8a792cd5da53a1277","contract_address":""}}
 
 # 密码 & 发送
-curl -i -H 'Content-Type: application/json' -X POST http://localhost:8685/v1/admin/transactionWithPassphrase -d '{"transaction":{"from":"n1FF1nz6tarkDVwWQkMnnwFPuPKUaQTdptE","to":"n1WU5PThmwgbuHFVopJG8cwf2EUB1FdSsxh", "value":"1000000000000000000","nonce":2,"gasPrice":"1000000","gasLimit":"2000000"},"passphrase":"passphrase"}'
+curl -i -H 'Content-Type: application/json' -X POST https://testnet.nebulas.io/v1/admin/transactionWithPassphrase -d '{"transaction":{"from":"n1ZNBpKGq6ffBjbUZR22terqWvenXzcdzZq","to":"n1SSda41zGr9FKF5DJNE2ryY1ToNrndMauN", "value":"100000000000000000","nonce":115,"gasPrice":"1000000","gasLimit":"2000000"},"passphrase":"passphrase"}'
 
 # 解锁 & 发送
 curl -i -H 'Content-Type: application/json' -X POST http://localhost:8685/v1/admin/account/unlock -d '{"address":"n1WU5PThmwgbuHFVopJG8cwf2EUB1FdSsxh","passphrase":"passphrase","duration":"100000000000"}'
@@ -38,7 +38,7 @@ curl -i -H 'Content-Type: application/json' -X POST http://localhost:8685/v1/adm
 curl -i -H Accept:application/json -X POST http://localhost:8685/v1/user/getTransactionReceipt -d '{"hash":"939ac2fd510de60a05a590e335ac4d3e75393aa093c2762ee521eaa4040368d3"}'
 
 # getEventsByHash
-curl -i -H 'Content-Type: application/json' -X POST https://testnet.nebulas.io/v1/user/getEventsByHash -d '{"hash":"240b6053f35c09b4f353c6265afaeebcb02622f085767b5cd7798ae5c3dc7c2d"}'
+curl -i -H 'Content-Type: application/json' -X POST https://testnet.nebulas.io/v1/user/getEventsByHash -d '{"hash":"c4547e5569fc8152fe01663253cfa8beb3c4898cd7b071456853f89282386c40"}'
 
 
 # admin
