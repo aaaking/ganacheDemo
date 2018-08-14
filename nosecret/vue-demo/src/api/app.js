@@ -24,7 +24,6 @@ export default {
       "function": callFunction,
       "args": callArgs
     }
-    var result = ""
     neb.api.call(nebConfig.account.address, nebConfig.dappContactAddress, 0, 0, "1000000", "2000000", contract)
       .then(function (resp) {
         var result = JSON.parse(resp.result)
