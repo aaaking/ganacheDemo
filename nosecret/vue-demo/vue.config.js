@@ -11,6 +11,7 @@ module.exports = {
     config.resolve.alias.set('@', resolve('src'));
   },
   devServer: {
+    changeOrigin: true, // 是否启用跨域
     open: process.platform === 'darwin',
     host: '0.0.0.0',
     port: 5010,

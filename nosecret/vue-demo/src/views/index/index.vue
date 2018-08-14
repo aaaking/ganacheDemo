@@ -64,10 +64,10 @@ export default {
     request
       .list()
       .then(res => {
-        console.log(res || "res nil")
+        console.log('------res-----res', res)
       })
       .catch(err => {
-        console.log(err || "err nil")
+        console.log('------err-----0--', err)
       });
   }
 };
