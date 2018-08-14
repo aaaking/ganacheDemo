@@ -9,7 +9,7 @@
           <a :href="value.link" target="view_frame" class="link-a">{{value.site}}</a>
         </li>
       </ul>
-      <div class="link-title">© 2018 · epistasis · ALL RIGHT RESERVED · 中国-浙江省-杭州市</div>
+      <div class="link-title">© 2018 · epistasis · ALL RIGHT RESERVED · Hangzhou-Zhejiang Province-China</div>
     </div>
   </footer>
 </template>
