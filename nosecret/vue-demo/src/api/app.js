@@ -1,9 +1,12 @@
 import fetch from '@/utils/fetch';
 
-export function list(data) {
-  return fetch({
-    url: '/dollars/testzzh',
-    methods: 'get',
-    data
-  });
+// export default {
+//   list: () => fetch({
+//     url: '/dollars/testzzh',
+//     methods: 'get'
+//   }),
+// }
+
+export default {
+  list: () => fetch.get('/dollars/testzzh')
 }

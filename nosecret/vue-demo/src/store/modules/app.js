@@ -1,11 +1,11 @@
 const app = {
 	state: {
-		title: "大家的秘密-首页",
+		title: "区块链博客-首页",
 		email: "1059084407@qq.com",
 		wechat: "epistasis",
 		bannerInfo: {
-			title: "大家的秘密",
-			subTitle: "秘密不要憋在心中，一吐为快",
+			title: "区块链博客-title",
+			subTitle: "区块链博客-subtitle",
 			bgImg: "http://eps.ink/img/post-bg-rwd.jpg",
 			isShowBanner: true,
 			size: 'normal'

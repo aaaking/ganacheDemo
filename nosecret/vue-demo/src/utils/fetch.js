@@ -3,7 +3,7 @@ import Config from './config'
 
 const service = axios.create({
 	baseURL: Config.baseURL,
-	timeout: 15000
+	timeout: 60000
 })
 
 service.interceptors.request.use(config => {
@@ -14,10 +14,7 @@ service.interceptors.request.use(config => {
 
 
 service.interceptors.response.use(response => {
-	// const res = response.data
-	// const code = res.code
-
-	return res
+	return response
 }, error => {
 	return Promise.reject(error)
 })

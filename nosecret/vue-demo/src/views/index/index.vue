@@ -19,7 +19,7 @@ import {
 } from "@/components/section/index";
 import { BlogNav, BlogPanel } from "@/components/blog/index";
 import { TagList } from "@/components/tag/index";
-// import app from "@/api/app";
+import request from "@/api/app";
 export default {
   components: {
     LeftSection,
@@ -61,15 +61,14 @@ export default {
     console.log("-------created");
   },
   mounted() {
-    console.log("-------mounted");
-    // request
-    //   .list()
-    //   .then(res => {
-    //     console.log(res)
-    //   })
-    //   .catch(err => {
-
-    //   });
+    request
+      .list()
+      .then(res => {
+        console.log(res || "res nil")
+      })
+      .catch(err => {
+        console.log(err || "err nil")
+      });
   }
 };
 </script>
