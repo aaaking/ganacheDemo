@@ -18,7 +18,7 @@ curl -i -H 'Content-Type: application/json' -X GET http://localhost:8685/v1/user
 curl -i -H 'Content-Type: application/json' -X POST http://localhost:8685/v1/admin/account/unlock -d '{"address":"n1WU5PThmwgbuHFVopJG8cwf2EUB1FdSsxh","passphrase":"passphrase","duration":"1000000000"}'
 curl -i -H 'Content-Type: application/json' -X POST http://localhost:8685/v1/admin/account/lock -d '{"address":"n1WU5PThmwgbuHFVopJG8cwf2EUB1FdSsxh"}'
 
-curl -i -H Accept:application/json -X POST https://testnet.nebulas.io/v1/user/accountstate -d '{"address":"n1ZNBpKGq6ffBjbUZR22terqWvenXzcdzZq"}'
+curl -i -H Accept:application/json -X POST https://testnet.nebulas.io/v1/user/accountstate -d '{"address":"n1SSda41zGr9FKF5DJNE2ryY1ToNrndMauN"}'
 curl -i -H 'Content-Type: application/json' -X POST http://localhost:8685/v1/user/accountstate -d '{"address":"n1WU5PThmwgbuHFVopJG8cwf2EUB1FdSsxh"}'
 
 # 签名 & 发送
@@ -41,6 +41,16 @@ curl -i -H Accept:application/json -X POST https://testnet.nebulas.io/v1/user/ge
 
 # getEventsByHash
 curl -i -H 'Content-Type: application/json' -X POST https://testnet.nebulas.io/v1/user/getEventsByHash -d '{"hash":"c4547e5569fc8152fe01663253cfa8beb3c4898cd7b071456853f89282386c40"}'
+
+
+# getBlockByHash
+curl -i -H 'Content-Type: application/json' -X POST https://testnet.nebulas.io/v1/user/getBlockByHash -d '{"hash":"a1b953da43a60d7f08d0ad45ecccad2f2d0a15978cb850e64d3bb1471976e0e5", "full_fill_transaction":true}'
+
+# getTransactionReceipt 
+curl -i -H 'Content-Type: application/json' -X POST https://testnet.nebulas.io/v1/user/getTransactionReceipt -d '{"hash":"fb14f187f14a933a0c8e98dae54faf2be9d803fe0659bed667dc7dc790397ae1"}'
+
+# GetTransactionByContract
+curl -i -H 'Content-Type: application/json' -X POST https://testnet.nebulas.io/v1/user/getTransactionByContract -d '{"address":"n1nMFaAnUMPB9Jz1rNEKBGjc4TZRjmPyZxD"}'
 
 
 # admin
