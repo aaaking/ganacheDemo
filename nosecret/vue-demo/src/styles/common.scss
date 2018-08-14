@@ -1,0 +1,101 @@
+:root {
+	--none: transparent;
+}
+html {
+	word-break: break-word;
+	text-rendering: optimizeLegibility;
+}
+body {
+	background-color: #f4f5f5;
+}
+
+.xs-navbar {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	background-color: transparent !important;
+	z-index: 2;
+	transition: all .3s;
+}
+.xs-navbar.default {
+	background-color: #007bff !important;
+	.xs-nav-bg {
+		background-color: #007bff !important;
+	}
+}
+.xs-navbar.fixed {
+	position: fixed;
+	left: 0;
+	top: 0;
+	transform: translateY(0);
+	background-color: rgba(0,0,0, 0.8) !important;
+	animation: toFixed .4s ease;
+}
+
+@keyframes toFixed {
+	from {
+		transform: translateY(-56px);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+.xs-nav-bg {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	z-index: -1;
+	transition: all .3s;
+}
+.xs-nav-bg.hide {
+	background-color: transparent;
+}
+// 列表按钮
+.navbar-toggler {
+	position: absolute;
+	right: 20px;
+	top: 10px;
+	transfrom: translateY( -50% );
+}
+// 导航
+.nav-link {
+	text-align: center;
+	a {
+		transition: all .4s;
+		&:hover, &:focus {
+			text-decoration: none;
+		}
+	}
+}
+.navbar-light {
+	.nav-link {
+		a {
+			color: rgba(0, 0, 0, 0.6);
+			&:hover, &:focus {
+					color: rgba(0, 0, 0, 1);
+					text-decoration: none;
+			}
+		}
+	}
+}
+.navbar-dark {
+	.navbar-brand {
+	}
+	.nav-link {
+		a {
+			color: rgba(255, 255, 255, 0.5);
+			&:hover, &:focus {
+				color: rgba(255, 255, 255, 1);
+				text-decoration: none;
+			}
+		}
+	}
+} 
+
+.text-normal {
+	font-weight: 400 !important
+}
