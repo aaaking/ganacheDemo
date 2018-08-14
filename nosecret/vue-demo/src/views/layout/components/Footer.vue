@@ -2,8 +2,11 @@
   <div class="footer-wrapper">
     <div class="footer-link">
       <ul class="link-list">
-        <li @click="switchToSite(item.link)" v-for="item in lxsLink" :key="item.site" class="link-item">
+        <!-- <li @click="switchToSite(item.link)" v-for="item in lxsLink" :key="item.site" class="link-item">
           <i :class="`iconfont icon-${item.site}`"></i>
+        </li> -->
+        <li v-for="value in lxsLink" :key="value.site">
+          <a :href="value.link" target="view_frame" class="link-a">{{value.site}}</a>
         </li>
       </ul>
       <div class="link-title">© 2018 · epistasis · ALL RIGHT RESERVED · 中国-浙江省-杭州市</div>
@@ -42,6 +45,9 @@ export default {
 
 <style lang="scss" scoped>
 @import url("./iconfont/iconfont.scss");
+.link-a {
+  margin: auto 20px;
+}
 .footer {
   &-wrapper {
     width: 100%;
@@ -49,11 +55,11 @@ export default {
     border-top: 1px solid #eaecef;
     display: flex;
     flex-direction: column;
-    background-color: #fff;
+    background-color: #97ffff;
   }
   &-link {
     width: 100%;
-    padding: 40px 0;
+    padding: 15px 0;
     .link {
       &-list {
         display: flex;
