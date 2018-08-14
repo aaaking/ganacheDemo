@@ -60,7 +60,7 @@ export default {
         { title: "首页", to: "/index", disabled: false },
         { title: "文章", to: "/blogs/index", disabled: false },
         { title: "图片集", to: "/photo/index", disabled: false },
-        { title: "关于我", to: "/about/index", disabled: false }
+        { title: "关于", to: "/about/index", disabled: false }
       ]
     };
   },

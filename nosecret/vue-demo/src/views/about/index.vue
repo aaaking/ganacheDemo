@@ -1,62 +1,14 @@
 <template>
   <div class="about-wrapper">
-    <h1>个人信息</h1>
+    <h1>关于</h1>
     <div class="about-message">
-      <pre>
-      {
-        basic: {
-          name: "Xiaoshun Lin",
-          code_name: "epistasis",
-          age: "21",
-          gender: "male",
-          data_of_birth: "February 11, 1997",
-          occupation: "Front-end development",
-          country: "china",
-          province: "Guangdong",
-          city: "Guangzhou",
-          languages: {
-            Chinese: "native", 
-            English: "basic"
-          },
-          hobbies: [
-            "basketball",
-            "Web Designing"
-          ]
-        },
-        sklls: {
-          front-end_languages: [
-            "webpack", 
-            "vue.js", 
-            "mini programs, 
-            "react.js", 
-            "javascript", 
-            "html5", 
-            "underscore.js", 
-            "css/html", 
-            "bootstrap"
-          ],
-          computer_software: [
-            "VsCode", 
-            "Sublime Text", 
-            "Android Studio", 
-            "Microsoft office", 
-            "so on"
-          ],
-          certificate: [ 
-            "CET-4", 
-            "NCRE 3-Software Testing",
-            "China National Scholarship(2017)",
-            "National Endeavor Scholarship(2016)"
-          ],
-          education: [
-            {
-              time: "2015.09-2018-07",
-              name: "Guangdong AIB Polytechnic College"
-            }
-          ],
-        }
-      }
-    </pre>
+      <pre class="msg-pre">
+        作者：epistasis
+        Email: 1059084407@qq.com
+        合约地址：---
+        网络：https://testnet.nebulas.io
+        详情：<a href="https://explorer.nebulas.io/#/testnet/address/n1ZNBpKGq6ffBjbUZR22terqWvenXzcdzZq" target="view_frame">链接</a>
+      </pre>
     </div>
 
   </div>
@@ -66,9 +18,9 @@ export default {
   data() {
     return {
       bannerInfo: {
-        title: "关于林晓舜",
-        subTitle: "Email: 1001931638@139.com",
-        bgImg: "http://eps.ink/img/post-bg-rwd.jpg",
+        title: "",
+        subTitle: "",
+        bgImg: "https://cdn-images-1.medium.com/max/2000/1*3FVOI0HJNamEVvcnmRPqSg.jpeg",
         isShowBanner: true,
         size: "normal"
       }
@@ -94,5 +46,8 @@ export default {
   &-message {
     text-align: left;
   }
+}
+.msg-pre {
+  font-size: 140%
 }
 </style>
