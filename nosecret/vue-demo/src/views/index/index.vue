@@ -44,111 +44,13 @@ export default {
         { id: "1004", title: "css" }
       ],
       blogList: [
-        {
-          id: "201807241638",
-          title: "喜大普奔，Ant Design of Vue 1.0版本发布🎉🎉🎉",
-          time: "2018-07-24 16:38:00",
-          tag: "vue",
-          author: "zzh"
-        },
-        {
-          id: "201807241639",
-          title: "喜大普奔，Ant Design of react 3.0版本发布🎉🎉🎉",
-          time: "2018-07-24 16:38:00",
-          tag: "react",
-          author: "zzh"
-        },
-        {
-          id: "2018072416340",
-          title: "七天学不会nodejs--流",
-          time: "2018-07-24 16:38:00",
-          tag: "node",
-          author: "zzh"
-        },
-        {
-          id: "2018072416341",
-          title: "七天学不会nodejs--流",
-          time: "2018-07-24 16:38:00",
-          tag: "node",
-          author: "zzh"
-        },
-        {
-          id: "2018072416342",
-          title: "七天学不会nodejs--流",
-          time: "2018-07-24 16:38:00",
-          tag: "node",
-          author: "zzh"
-        },
-        {
-          id: "2018072416343",
-          title: "七天学不会nodejs--流",
-          time: "2018-07-24 16:38:00",
-          tag: "node",
-          author: "zzh"
-        },
-        {
-          id: "2018072416343",
-          title: "七天学不会nodejs--流",
-          time: "2018-07-24 16:38:00",
-          tag: "node",
-          author: "zzh"
-        },
-        {
-          id: "2018072416343",
-          title: "七天学不会nodejs--流",
-          time: "2018-07-24 16:38:00",
-          tag: "node",
-          author: "zzh"
-        },
-        {
-          id: "2018072416343",
-          title: "七天学不会nodejs--流",
-          time: "2018-07-24 16:38:00",
-          tag: "node",
-          author: "zzh"
-        },
-        {
-          id: "2018072416343",
-          title: "七天学不会nodejs--流",
-          time: "2018-07-24 16:38:00",
-          tag: "node",
-          author: "zzh"
-        },
-        {
-          id: "2018072416343",
-          title: "七天学不会nodejs--流",
-          time: "2018-07-24 16:38:00",
-          tag: "node",
-          author: "zzh"
-        },
-        {
-          id: "2018072416343",
-          title: "七天学不会nodejs--流",
-          time: "2018-07-24 16:38:00",
-          tag: "node",
-          author: "zzh"
-        },
-        {
-          id: "2018072416343",
-          title: "七天学不会nodejs--流",
-          time: "2018-07-24 16:38:00",
-          tag: "node",
-          author: "zzh"
-        },
-        {
-          id: "2018072416343",
-          title: "七天学不会nodejs--流",
-          time: "2018-07-24 16:38:00",
-          tag: "node",
-          author: "zzh"
-        },
-        {
-          id: "2018072416343",
-          title: "七天学不会nodejs--流",
-          time: "2018-07-24 16:38:00",
-          tag: "node",
-          author: "zzh"
-        }
+        // {
+        //   id: "201807241638",
+        //   title: "喜大普奔，Ant Design of Vue 1.0版本发布🎉🎉🎉",
+        //   time: "2018-07-24 16:38:00",
+        //   tag: "vue",
+        //   author: "zzh"
+        // }
       ]
     };
   },
