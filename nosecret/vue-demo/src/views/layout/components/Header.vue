@@ -3,7 +3,7 @@
     <b-navbar toggleable="md" :type="isShowNav && bannerInfo.isShowBanner? 'light': 'dark'" variant="white" :class="{'xs-navbar': true, 'default': !bannerInfo.isShowBanner, 'fixed': isFixed}">
       <!-- 标题orLogo -->
       <b-navbar-brand @click.capture="goHome" href="#">
-        NoSecret
+        Neb-Blog
       </b-navbar-brand>
       
       <!-- 导航栏 -->
@@ -59,7 +59,7 @@ export default {
       routerList: [
         { title: "首页", to: "/index", disabled: false },
         { title: "文章", to: "/blogs/index", disabled: false },
-        { title: "图片集", to: "/photo/index", disabled: false },
+        // { title: "图片集", to: "/photo/index", disabled: false },
         { title: "关于", to: "/about/index", disabled: false }
       ]
     };

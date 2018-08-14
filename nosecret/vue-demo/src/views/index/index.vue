@@ -31,8 +31,8 @@ export default {
   data() {
     return {
       bannerInfo: {
-        title: "大家的秘密",
-        subTitle: "秘密不要憋在心中，一吐为快",
+        title: "区块链博客",
+        subTitle: "基于Nebulas的区块链dapp，发布的文章将会永久保存到链上",
         bgImg: "https://cdn-images-1.medium.com/max/2000/0*m2L1KHdVgUBnrwOe",
         isShowBanner: true,
         size: "normal"
