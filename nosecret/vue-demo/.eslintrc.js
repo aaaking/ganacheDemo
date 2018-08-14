@@ -13,7 +13,7 @@ module.exports = {
     "rules": {
         "indent": [
             "error",
-            "tab"
+            4
         ],
         "linebreak-style": [
             "error",
@@ -27,6 +27,8 @@ module.exports = {
             "error",
             "never"
         ],
+        "eslintIgnore": ["*"],
         "allow": ["warn", "error"]//https://eslint.org/docs/rules/no-console
-    }
+    },
+    "parser": "babel-eslint"
 };
