@@ -1,9 +1,9 @@
 import fetch from '@/utils/fetch';
 
-export function getInit(data) {
+export function list(data) {
   return fetch({
-    url: '/test',
-    methods: 'post',
+    url: '/dollars/testzzh',
+    methods: 'get',
     data
   });
 }

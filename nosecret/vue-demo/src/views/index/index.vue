@@ -19,6 +19,7 @@ import {
 } from "@/components/section/index";
 import { BlogNav, BlogPanel } from "@/components/blog/index";
 import { TagList } from "@/components/tag/index";
+// import app from "@/api/app";
 export default {
   components: {
     LeftSection,
@@ -29,6 +30,7 @@ export default {
     TagList
   },
   data() {
+    console.log("-------data");
     return {
       bannerInfo: {
         title: "区块链博客",
@@ -56,6 +58,18 @@ export default {
   },
   created() {
     this.$store.commit("TOGGLE_BANNER", this.bannerInfo);
+    console.log("-------created");
+  },
+  mounted() {
+    console.log("-------mounted");
+    // request
+    //   .list()
+    //   .then(res => {
+    //     console.log(res)
+    //   })
+    //   .catch(err => {
+
+    //   });
   }
 };
 </script>
