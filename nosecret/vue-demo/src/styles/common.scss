@@ -84,6 +84,8 @@ body {
 }
 .navbar-dark {
 	.navbar-brand {
+		font-size: 190%;
+		font-weight: bold;
 		color: #7A378B;
 		&:hover, &:focus {
 			color: #7A378B
@@ -91,6 +93,7 @@ body {
 	}
 	.nav-link {
 		a {
+			font-size: 110%;
 			color: rgba(122,55,139, 0.5);
 			&:hover, &:focus {
 				color: rgba(122,55,139, 1);
