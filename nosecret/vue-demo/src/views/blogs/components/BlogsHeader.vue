@@ -10,16 +10,16 @@
 </template>
 
 <script>
-import { TagList } from '@/components/tag/index';
+import { TagList } from "@/components/tag/index";
 export default {
   props: {
     title: {
       type: String,
-      default: '默认标题'
+      default: "默认标题"
     },
     desc: {
       type: String,
-      default: '默认描述默认描述'
+      default: "默认描述默认描述"
     },
     tags: {
       type: Array,
@@ -37,10 +37,10 @@ export default {
   data() {
     return {
       tagList: [
-        { id: '1001', title: '推荐' },
-        { id: '1002', title: 'javascript' },
-        { id: '1003', title: 'webpack' },
-        { id: '1004', title: 'css' }
+        { id: "1001", title: "推荐" },
+        { id: "1002", title: "javascript" },
+        { id: "1003", title: "webpack" },
+        { id: "1004", title: "css" }
       ]
     };
   }

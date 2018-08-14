@@ -2,7 +2,7 @@
   <div class="containner">
     <b-navbar toggleable="md" :type="isShowNav && bannerInfo.isShowBanner? 'light': 'dark'" variant="white" :class="{'xs-navbar': true, 'default': !bannerInfo.isShowBanner, 'fixed': isFixed}">
       <!-- 标题orLogo -->
-      <b-navbar-brand href="#">lxs24sxl</b-navbar-brand>
+      <b-navbar-brand href="#">epistasis</b-navbar-brand>
       <!-- 导航栏 -->
       <b-collapse is-nav id="nav_collapse" @click="toggleNav">
         <b-navbar-nav class="ml-auto" right>
@@ -42,27 +42,27 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters } from "vuex";
 let timer = null;
 
 export default {
-  name: 'Header',
+  name: "Header",
   data() {
     return {
       isShowNav: false,
-      scroll: '',
+      scroll: "",
       isFixed: false,
       isRouterChange: false,
       routerList: [
-        { title: '首页', to: '/index', disabled: false },
-        { title: '文章', to: '/blogs/index', disabled: false },
-        { title: '图片集', to: '/photo/index', disabled: false },
-        { title: '关于我', to: '/about/index', disabled: false }
+        { title: "首页", to: "/index", disabled: false },
+        { title: "文章", to: "/blogs/index", disabled: false },
+        { title: "图片集", to: "/photo/index", disabled: false },
+        { title: "关于我", to: "/about/index", disabled: false }
       ]
     };
   },
   computed: {
-    ...mapGetters(['bannerInfo'])
+    ...mapGetters(["bannerInfo"])
   },
   methods: {
     toggleNavItem(src) {
@@ -72,8 +72,8 @@ export default {
     },
     toggleNav() {
       this.isShowNav = document
-        .getElementById('toggleBtn')
-        .getAttribute('aria-expanded');
+        .getElementById("toggleBtn")
+        .getAttribute("aria-expanded");
     },
     scrollEvent() {
       let that = this;
@@ -92,7 +92,7 @@ export default {
             target.addEventListener(eventType, handler, false);
           }
         : function(target, eventType, handler) {
-            target.attachEvent('on' + eventType, handler);
+            target.attachEvent("on" + eventType, handler);
           };
     },
     removeHandler() {
@@ -101,12 +101,12 @@ export default {
             target.removeEventListener(eventType, handler, false);
           }
         : function(target, eventType, handler) {
-            target.detachEvent('on' + eventType, handler);
+            target.detachEvent("on" + eventType, handler);
           };
     }
   },
   mounted() {
-    window.addEventListener('scroll', this.scrollEvent, true);
+    window.addEventListener("scroll", this.scrollEvent, true);
   }
 };
 </script>
@@ -152,7 +152,7 @@ export default {
     padding: 100px 0;
   }
   .time {
-    font-family: Lora, 'Times Mew Roman', serif;
+    font-family: Lora, "Times Mew Roman", serif;
     font-style: italic;
     font-weight: 300;
   }

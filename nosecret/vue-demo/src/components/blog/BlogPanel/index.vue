@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import PanelItem from './PanelItem';
+import PanelItem from "./PanelItem";
 export default {
   data() {
     return {};

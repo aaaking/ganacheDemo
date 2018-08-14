@@ -17,27 +17,27 @@ export default {
     return {
       lxsLink: [
         {
-          site: 'weibo',
-          link: 'https://www.weibo.com/3545563737/profile?topnav=1&wvr=6'
+          site: "weibo",
+          link: "https://www.weibo.com/3545563737/profile?topnav=1&wvr=6"
         },
-        { site: 'github', link: 'https://github.com/lxs24sxl' },
+        { site: "github", link: "https://github.com/lxs24sxl" },
         {
-          site: 'facebook',
-          link: 'https://www.facebook.com/profile.php?id=100012801641980'
+          site: "facebook",
+          link: "https://www.facebook.com/profile.php?id=100012801641980"
         }
       ]
     };
   },
   methods: {
     switchToSite(link) {
-      window.open(link, '_blank');
+      window.open(link, "_blank");
     }
   }
 };
 </script>
 
 <style lang="scss" scoped>
-@import url('./iconfont/iconfont.scss');
+@import url("./iconfont/iconfont.scss");
 .footer {
   &-wrapper {
     width: 100%;

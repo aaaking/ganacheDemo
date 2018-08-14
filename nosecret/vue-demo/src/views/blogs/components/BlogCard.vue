@@ -41,7 +41,7 @@ export default {
         &:not(:last-child) {
           transition: all 0.3s;
           &::after {
-            content: '\B7';
+            content: "\B7";
             margin: 0 0.4em;
             color: #8f969c;
           }

@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import { BlogCard } from './index';
+import { BlogCard } from "./index";
 export default {
   components: {
     BlogCard

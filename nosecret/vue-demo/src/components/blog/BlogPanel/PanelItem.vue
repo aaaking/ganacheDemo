@@ -78,7 +78,7 @@ export default {
               color: #000;
             }
             &::after {
-              content: '\B7';
+              content: "\B7";
               margin: 0 0.4em;
               color: #8f969c;
             }

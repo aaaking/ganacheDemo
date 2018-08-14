@@ -16,7 +16,7 @@ export default {
     },
     title: {
       type: String,
-      default: '默认标题',
+      default: "默认标题",
       required: true
     },
     hasMore: {
@@ -25,7 +25,7 @@ export default {
     },
     size: {
       type: String,
-      default: 'normal'
+      default: "normal"
     },
     to: {
       type: String,

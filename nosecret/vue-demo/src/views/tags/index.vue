@@ -19,39 +19,39 @@ export default {
   data() {
     return {
       bannerInfo: {
-        title: '标签',
-        subTitle: 'Be My Personal Best',
-        bgImg: 'http://eps.ink/img/tag-bg.jpg',
+        title: "标签",
+        subTitle: "Be My Personal Best",
+        bgImg: "http://eps.ink/img/tag-bg.jpg",
         isShowBanner: true,
-        size: 'small'
+        size: "small"
       },
       tagsList: [
-        { title: 'webpack', recent_time: '2018-08-07', id: '0001', count: '1' },
-        { title: 'vue.js', recent_time: '2018-08-07', id: '0002', count: '2' },
+        { title: "webpack", recent_time: "2018-08-07", id: "0001", count: "1" },
+        { title: "vue.js", recent_time: "2018-08-07", id: "0002", count: "2" },
         {
-          title: 'react.js',
-          recent_time: '2018-08-07',
-          id: '0003',
-          count: '1'
+          title: "react.js",
+          recent_time: "2018-08-07",
+          id: "0003",
+          count: "1"
         },
         {
-          title: '微信小程序',
-          recent_time: '2018-08-07',
-          id: '0004',
-          count: '0'
+          title: "微信小程序",
+          recent_time: "2018-08-07",
+          id: "0004",
+          count: "0"
         },
         {
-          title: 'javascript',
-          recent_time: '2018-08-07',
-          id: '0005',
-          count: '0'
+          title: "javascript",
+          recent_time: "2018-08-07",
+          id: "0005",
+          count: "0"
         },
-        { title: 'css', recent_time: '2018-08-07', id: '0006', count: '0' }
+        { title: "css", recent_time: "2018-08-07", id: "0006", count: "0" }
       ]
     };
   },
   created() {
-    this.$store.commit('TOGGLE_BANNER', this.bannerInfo);
+    this.$store.commit("TOGGLE_BANNER", this.bannerInfo);
   }
 };
 </script>

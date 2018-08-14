@@ -1,11 +1,11 @@
 const app = {
 	state: {
-		title: "林晓舜的博客-首页",
-		email: "1001931638@139.com",
-		wechat: "lxs24sxl",
+		title: "大家的秘密-首页",
+		email: "1059084407@qq.com",
+		wechat: "epistasis",
 		bannerInfo: {
-			title: "林晓舜的博客",
-			subTitle: "大人物只是不断进取的小人物",
+			title: "大家的秘密",
+			subTitle: "秘密不要憋在心中，一吐为快",
 			bgImg: "http://eps.ink/img/post-bg-rwd.jpg",
 			isShowBanner: true,
 			size: 'normal'
@@ -15,16 +15,16 @@ const app = {
 		TOGGLE_TITLE: (state, title) => {
 			state.title = title
 		},
-		TOGGLE_BANNER: ( state, bannerInfo ) => {
+		TOGGLE_BANNER: (state, bannerInfo) => {
 			state.bannerInfo = bannerInfo
 		}
 	},
 	actions: {
-		ToggleTitle: ({ commit, title  }) => {
-			commit("TOGGLE_TITLE", title )
+		ToggleTitle: ({ commit, title }) => {
+			commit("TOGGLE_TITLE", title)
 		},
 		ToggleBanner: ({ commit, state }) => {
-			commit("TOGGLE_BANNER", state )
+			commit("TOGGLE_BANNER", state)
 		}
 	}
 }

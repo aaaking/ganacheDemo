@@ -8,9 +8,9 @@
 </template>
 
 <script>
-import { BlogsContent, BlogsHeader } from './components/index';
+import { BlogsContent, BlogsHeader } from "./components/index";
 export default {
-  name: 'home',
+  name: "home",
   components: {
     BlogsHeader,
     BlogsContent
@@ -18,32 +18,32 @@ export default {
   data() {
     return {
       bannerInfo: {
-        title: '',
-        subTitle: '',
-        bgImg: '',
+        title: "",
+        subTitle: "",
+        bgImg: "",
         isShowBanner: false,
-        size: 'normal'
+        size: "normal"
       },
       header_config: {
-        title: '全部文章',
-        desc: '这是一个沉淀技术的个人网站;文章类型包括原创技术、吹水和转载',
+        title: "全部文章",
+        desc: "这是一个沉淀技术的个人网站;文章类型包括原创技术、吹水和转载",
         tags: [
-          { id: '1001', title: '推荐' },
-          { id: '1002', title: 'javascript' },
-          { id: '1003', title: 'webpack' },
-          { id: '1004', title: 'css' }
+          { id: "1001", title: "推荐" },
+          { id: "1002", title: "javascript" },
+          { id: "1003", title: "webpack" },
+          { id: "1004", title: "css" }
         ]
       }
     };
   },
   created() {
-    this.$store.commit('TOGGLE_BANNER', this.bannerInfo);
+    this.$store.commit("TOGGLE_BANNER", this.bannerInfo);
   }
 };
 </script>
 
 <style lang="scss" scoped>
-@import url('https://fonts.googleapis.com/css?family=PT+Mono');
+@import url("https://fonts.googleapis.com/css?family=PT+Mono");
 
 $bg: #4f000b;
 $itemBg1: #720026;
@@ -65,7 +65,7 @@ html {
   width: 100%;
   height: 100%;
   background: $bg;
-  font-family: 'PT Mono', monospace;
+  font-family: "PT Mono", monospace;
 }
 .blogs {
   max-width: 1110px;

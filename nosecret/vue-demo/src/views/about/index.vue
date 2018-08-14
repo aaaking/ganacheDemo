@@ -6,7 +6,7 @@
       {
         basic: {
           name: "Xiaoshun Lin",
-          code_name: "lxs24sxl",
+          code_name: "epistasis",
           age: "21",
           gender: "male",
           data_of_birth: "February 11, 1997",
@@ -66,16 +66,16 @@ export default {
   data() {
     return {
       bannerInfo: {
-        title: '关于林晓舜',
-        subTitle: 'Email: 1001931638@139.com',
-        bgImg: 'http://eps.ink/img/post-bg-rwd.jpg',
+        title: "关于林晓舜",
+        subTitle: "Email: 1001931638@139.com",
+        bgImg: "http://eps.ink/img/post-bg-rwd.jpg",
         isShowBanner: true,
-        size: 'normal'
+        size: "normal"
       }
     };
   },
   created() {
-    this.$store.commit('TOGGLE_BANNER', this.bannerInfo);
+    this.$store.commit("TOGGLE_BANNER", this.bannerInfo);
   }
 };
 </script>

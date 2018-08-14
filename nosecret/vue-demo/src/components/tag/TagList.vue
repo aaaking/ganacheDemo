@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import Tag from './Tag';
+import Tag from "./Tag";
 export default {
   data() {
     return {};

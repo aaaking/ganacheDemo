@@ -22,220 +22,220 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
+import { mapGetters } from "vuex";
 export default {
   data() {
     return {
       bannerInfo: {
-        title: '',
-        subTitle: '',
-        bgImg: '',
+        title: "",
+        subTitle: "",
+        bgImg: "",
         isShowBanner: false,
-        size: 'normal'
+        size: "normal"
       },
       dataList: [
         {
-          id: '0001',
+          id: "0001",
           img:
-            'https://lh3.googleusercontent.com/-cGXquY7pZpc/W2fiCjCXgGI/AAAAAAAAbBg/-cngXfQkjtgx8pejxGDm-uKXoiNWqxm0QCJoC/w530-h530-n-rw/wall-art.jpg',
-          size: 'normal',
+            "https://lh3.googleusercontent.com/-cGXquY7pZpc/W2fiCjCXgGI/AAAAAAAAbBg/-cngXfQkjtgx8pejxGDm-uKXoiNWqxm0QCJoC/w530-h530-n-rw/wall-art.jpg",
+          size: "normal",
           sub_img:
-            'https://github.com/lxs24sxl/readme_add_pic/raw/master/vue_blog_images/universal-javascript.jpg',
+            "https://github.com/lxs24sxl/readme_add_pic/raw/master/vue_blog_images/universal-javascript.jpg",
           // sub_img: 'https://dri.es/files/images/blog/universal-javascript.jpg',
           height: 282
         },
         {
-          id: '0002',
+          id: "0002",
           img:
-            'https://lh3.googleusercontent.com/-59eYM0JY5AY/W2f0T9vq22I/AAAAAAACCJQ/YYSndkLFTLYSEeHJN9W0yD_4RCIvTflZgCJoC/w530-h325-n-rw/ChrisSutton-20180501---philharmonie-de-paris-10.jpg',
-          size: 'small',
+            "https://lh3.googleusercontent.com/-59eYM0JY5AY/W2f0T9vq22I/AAAAAAACCJQ/YYSndkLFTLYSEeHJN9W0yD_4RCIvTflZgCJoC/w530-h325-n-rw/ChrisSutton-20180501---philharmonie-de-paris-10.jpg",
+          size: "small",
           sub_img:
-            'https://github.com/lxs24sxl/readme_add_pic/raw/master/vue_blog_images/cat.jpg',
+            "https://github.com/lxs24sxl/readme_add_pic/raw/master/vue_blog_images/cat.jpg",
           // sub_img: 'http://img.wxcha.com/file/201603/07/7ec4c7c1f7.jpg',
           height: 172
         },
         {
-          id: '0003',
+          id: "0003",
           img:
-            'https://lh3.googleusercontent.com/-e-TH_gArm2A/W2f4SHwFTMI/AAAAAAACCJ8/f2KpjrSlfDk7TvQFPE35KRbl3TIjLCVfACJoC/w530-h497-n-rw/ChrisSutton-20180803--04058-at-the-flower-farm.jpg',
-          size: 'medium',
+            "https://lh3.googleusercontent.com/-e-TH_gArm2A/W2f4SHwFTMI/AAAAAAACCJ8/f2KpjrSlfDk7TvQFPE35KRbl3TIjLCVfACJoC/w530-h497-n-rw/ChrisSutton-20180803--04058-at-the-flower-farm.jpg",
+          size: "medium",
           sub_img:
-            'https://github.com/lxs24sxl/readme_add_pic/raw/master/vue_blog_images/cake.png',
+            "https://github.com/lxs24sxl/readme_add_pic/raw/master/vue_blog_images/cake.png",
           // sub_img: 'https://mdn.mozillademos.org/files/13502/cake.png',
           height: 264
         },
         {
-          id: '0004',
+          id: "0004",
           img:
-            'https://lh3.googleusercontent.com/-59eYM0JY5AY/W2f0T9vq22I/AAAAAAACCJQ/YYSndkLFTLYSEeHJN9W0yD_4RCIvTflZgCJoC/w530-h325-n-rw/ChrisSutton-20180501---philharmonie-de-paris-10.jpg',
-          size: 'small',
+            "https://lh3.googleusercontent.com/-59eYM0JY5AY/W2f0T9vq22I/AAAAAAACCJQ/YYSndkLFTLYSEeHJN9W0yD_4RCIvTflZgCJoC/w530-h325-n-rw/ChrisSutton-20180501---philharmonie-de-paris-10.jpg",
+          size: "small",
           sub_img:
-            'https://github.com/lxs24sxl/readme_add_pic/raw/master/vue_blog_images/cat.jpg',
+            "https://github.com/lxs24sxl/readme_add_pic/raw/master/vue_blog_images/cat.jpg",
           // sub_img: 'http://img.wxcha.com/file/201603/07/7ec4c7c1f7.jpg',
           height: 172
         },
 
         {
-          id: '0005',
+          id: "0005",
           img:
-            'https://lh3.googleusercontent.com/-e-TH_gArm2A/W2f4SHwFTMI/AAAAAAACCJ8/f2KpjrSlfDk7TvQFPE35KRbl3TIjLCVfACJoC/w530-h497-n-rw/ChrisSutton-20180803--04058-at-the-flower-farm.jpg',
-          size: 'medium',
+            "https://lh3.googleusercontent.com/-e-TH_gArm2A/W2f4SHwFTMI/AAAAAAACCJ8/f2KpjrSlfDk7TvQFPE35KRbl3TIjLCVfACJoC/w530-h497-n-rw/ChrisSutton-20180803--04058-at-the-flower-farm.jpg",
+          size: "medium",
           sub_img:
-            'https://github.com/lxs24sxl/readme_add_pic/raw/master/vue_blog_images/cake.png',
+            "https://github.com/lxs24sxl/readme_add_pic/raw/master/vue_blog_images/cake.png",
           // sub_img: 'https://mdn.mozillademos.org/files/13502/cake.png',
           height: 264
         },
         {
-          id: '0006',
+          id: "0006",
           img:
-            'https://lh3.googleusercontent.com/-59eYM0JY5AY/W2f0T9vq22I/AAAAAAACCJQ/YYSndkLFTLYSEeHJN9W0yD_4RCIvTflZgCJoC/w530-h325-n-rw/ChrisSutton-20180501---philharmonie-de-paris-10.jpg',
-          size: 'small',
+            "https://lh3.googleusercontent.com/-59eYM0JY5AY/W2f0T9vq22I/AAAAAAACCJQ/YYSndkLFTLYSEeHJN9W0yD_4RCIvTflZgCJoC/w530-h325-n-rw/ChrisSutton-20180501---philharmonie-de-paris-10.jpg",
+          size: "small",
           sub_img:
-            'https://github.com/lxs24sxl/readme_add_pic/raw/master/vue_blog_images/cat.jpg',
+            "https://github.com/lxs24sxl/readme_add_pic/raw/master/vue_blog_images/cat.jpg",
           // sub_img: 'http://img.wxcha.com/file/201603/07/7ec4c7c1f7.jpg',
           height: 172
         },
         {
-          id: '0007',
+          id: "0007",
           img:
-            'https://lh3.googleusercontent.com/-cGXquY7pZpc/W2fiCjCXgGI/AAAAAAAAbBg/-cngXfQkjtgx8pejxGDm-uKXoiNWqxm0QCJoC/w530-h530-n-rw/wall-art.jpg',
-          size: 'normal',
+            "https://lh3.googleusercontent.com/-cGXquY7pZpc/W2fiCjCXgGI/AAAAAAAAbBg/-cngXfQkjtgx8pejxGDm-uKXoiNWqxm0QCJoC/w530-h530-n-rw/wall-art.jpg",
+          size: "normal",
           sub_img:
-            'https://github.com/lxs24sxl/readme_add_pic/raw/master/vue_blog_images/universal-javascript.jpg',
+            "https://github.com/lxs24sxl/readme_add_pic/raw/master/vue_blog_images/universal-javascript.jpg",
           // sub_img: 'https://dri.es/files/images/blog/universal-javascript.jpg',
           height: 282
         },
         {
-          id: '0008',
+          id: "0008",
           img:
-            'https://lh3.googleusercontent.com/-cGXquY7pZpc/W2fiCjCXgGI/AAAAAAAAbBg/-cngXfQkjtgx8pejxGDm-uKXoiNWqxm0QCJoC/w530-h530-n-rw/wall-art.jpg',
-          size: 'normal',
+            "https://lh3.googleusercontent.com/-cGXquY7pZpc/W2fiCjCXgGI/AAAAAAAAbBg/-cngXfQkjtgx8pejxGDm-uKXoiNWqxm0QCJoC/w530-h530-n-rw/wall-art.jpg",
+          size: "normal",
           sub_img:
-            'https://github.com/lxs24sxl/readme_add_pic/raw/master/vue_blog_images/universal-javascript.jpg',
+            "https://github.com/lxs24sxl/readme_add_pic/raw/master/vue_blog_images/universal-javascript.jpg",
           // sub_img: 'https://dri.es/files/images/blog/universal-javascript.jpg',
           height: 282
         },
 
         {
-          id: '0009',
+          id: "0009",
           img:
-            'https://lh3.googleusercontent.com/-e-TH_gArm2A/W2f4SHwFTMI/AAAAAAACCJ8/f2KpjrSlfDk7TvQFPE35KRbl3TIjLCVfACJoC/w530-h497-n-rw/ChrisSutton-20180803--04058-at-the-flower-farm.jpg',
-          size: 'medium',
+            "https://lh3.googleusercontent.com/-e-TH_gArm2A/W2f4SHwFTMI/AAAAAAACCJ8/f2KpjrSlfDk7TvQFPE35KRbl3TIjLCVfACJoC/w530-h497-n-rw/ChrisSutton-20180803--04058-at-the-flower-farm.jpg",
+          size: "medium",
           sub_img:
-            'https://github.com/lxs24sxl/readme_add_pic/raw/master/vue_blog_images/cake.png',
+            "https://github.com/lxs24sxl/readme_add_pic/raw/master/vue_blog_images/cake.png",
           // sub_img: 'https://mdn.mozillademos.org/files/13502/cake.png',
           height: 264
         },
         {
-          id: '0010',
+          id: "0010",
           img:
-            'https://lh3.googleusercontent.com/-59eYM0JY5AY/W2f0T9vq22I/AAAAAAACCJQ/YYSndkLFTLYSEeHJN9W0yD_4RCIvTflZgCJoC/w530-h325-n-rw/ChrisSutton-20180501---philharmonie-de-paris-10.jpg',
-          size: 'small',
+            "https://lh3.googleusercontent.com/-59eYM0JY5AY/W2f0T9vq22I/AAAAAAACCJQ/YYSndkLFTLYSEeHJN9W0yD_4RCIvTflZgCJoC/w530-h325-n-rw/ChrisSutton-20180501---philharmonie-de-paris-10.jpg",
+          size: "small",
           sub_img:
-            'https://github.com/lxs24sxl/readme_add_pic/raw/master/vue_blog_images/cat.jpg',
+            "https://github.com/lxs24sxl/readme_add_pic/raw/master/vue_blog_images/cat.jpg",
           // sub_img: 'http://img.wxcha.com/file/201603/07/7ec4c7c1f7.jpg',
           height: 172
         },
         {
-          id: '0011',
+          id: "0011",
           img:
-            'https://lh3.googleusercontent.com/-cGXquY7pZpc/W2fiCjCXgGI/AAAAAAAAbBg/-cngXfQkjtgx8pejxGDm-uKXoiNWqxm0QCJoC/w530-h530-n-rw/wall-art.jpg',
-          size: 'normal',
+            "https://lh3.googleusercontent.com/-cGXquY7pZpc/W2fiCjCXgGI/AAAAAAAAbBg/-cngXfQkjtgx8pejxGDm-uKXoiNWqxm0QCJoC/w530-h530-n-rw/wall-art.jpg",
+          size: "normal",
           sub_img:
-            'https://github.com/lxs24sxl/readme_add_pic/raw/master/vue_blog_images/universal-javascript.jpg',
+            "https://github.com/lxs24sxl/readme_add_pic/raw/master/vue_blog_images/universal-javascript.jpg",
           // sub_img: 'https://dri.es/files/images/blog/universal-javascript.jpg',
           height: 282
         },
         {
-          id: '0012',
+          id: "0012",
           img:
-            'https://lh3.googleusercontent.com/-59eYM0JY5AY/W2f0T9vq22I/AAAAAAACCJQ/YYSndkLFTLYSEeHJN9W0yD_4RCIvTflZgCJoC/w530-h325-n-rw/ChrisSutton-20180501---philharmonie-de-paris-10.jpg',
-          size: 'small',
+            "https://lh3.googleusercontent.com/-59eYM0JY5AY/W2f0T9vq22I/AAAAAAACCJQ/YYSndkLFTLYSEeHJN9W0yD_4RCIvTflZgCJoC/w530-h325-n-rw/ChrisSutton-20180501---philharmonie-de-paris-10.jpg",
+          size: "small",
           sub_img:
-            'https://github.com/lxs24sxl/readme_add_pic/raw/master/vue_blog_images/cat.jpg',
+            "https://github.com/lxs24sxl/readme_add_pic/raw/master/vue_blog_images/cat.jpg",
           // sub_img: 'http://img.wxcha.com/file/201603/07/7ec4c7c1f7.jpg',
           height: 172
         },
 
         {
-          id: '0013',
+          id: "0013",
           img:
-            'https://lh3.googleusercontent.com/-59eYM0JY5AY/W2f0T9vq22I/AAAAAAACCJQ/YYSndkLFTLYSEeHJN9W0yD_4RCIvTflZgCJoC/w530-h325-n-rw/ChrisSutton-20180501---philharmonie-de-paris-10.jpg',
-          size: 'small',
+            "https://lh3.googleusercontent.com/-59eYM0JY5AY/W2f0T9vq22I/AAAAAAACCJQ/YYSndkLFTLYSEeHJN9W0yD_4RCIvTflZgCJoC/w530-h325-n-rw/ChrisSutton-20180501---philharmonie-de-paris-10.jpg",
+          size: "small",
           sub_img:
-            'https://github.com/lxs24sxl/readme_add_pic/raw/master/vue_blog_images/cat.jpg',
+            "https://github.com/lxs24sxl/readme_add_pic/raw/master/vue_blog_images/cat.jpg",
           // sub_img: 'http://img.wxcha.com/file/201603/07/7ec4c7c1f7.jpg',
           height: 172
         },
         {
-          id: '0014',
+          id: "0014",
           img:
-            'https://lh3.googleusercontent.com/-59eYM0JY5AY/W2f0T9vq22I/AAAAAAACCJQ/YYSndkLFTLYSEeHJN9W0yD_4RCIvTflZgCJoC/w530-h325-n-rw/ChrisSutton-20180501---philharmonie-de-paris-10.jpg',
-          size: 'small',
+            "https://lh3.googleusercontent.com/-59eYM0JY5AY/W2f0T9vq22I/AAAAAAACCJQ/YYSndkLFTLYSEeHJN9W0yD_4RCIvTflZgCJoC/w530-h325-n-rw/ChrisSutton-20180501---philharmonie-de-paris-10.jpg",
+          size: "small",
           sub_img:
-            'https://github.com/lxs24sxl/readme_add_pic/raw/master/vue_blog_images/cat.jpg',
+            "https://github.com/lxs24sxl/readme_add_pic/raw/master/vue_blog_images/cat.jpg",
           // sub_img: 'http://img.wxcha.com/file/201603/07/7ec4c7c1f7.jpg',
           height: 172
         },
         {
-          id: '0015',
+          id: "0015",
           img:
-            'https://lh3.googleusercontent.com/-cGXquY7pZpc/W2fiCjCXgGI/AAAAAAAAbBg/-cngXfQkjtgx8pejxGDm-uKXoiNWqxm0QCJoC/w530-h530-n-rw/wall-art.jpg',
-          size: 'normal',
+            "https://lh3.googleusercontent.com/-cGXquY7pZpc/W2fiCjCXgGI/AAAAAAAAbBg/-cngXfQkjtgx8pejxGDm-uKXoiNWqxm0QCJoC/w530-h530-n-rw/wall-art.jpg",
+          size: "normal",
           sub_img:
-            'https://github.com/lxs24sxl/readme_add_pic/raw/master/vue_blog_images/universal-javascript.jpg',
+            "https://github.com/lxs24sxl/readme_add_pic/raw/master/vue_blog_images/universal-javascript.jpg",
           // sub_img: 'https://dri.es/files/images/blog/universal-javascript.jpg',
           height: 282
         },
         {
-          id: '0016',
+          id: "0016",
           img:
-            'https://lh3.googleusercontent.com/-e-TH_gArm2A/W2f4SHwFTMI/AAAAAAACCJ8/f2KpjrSlfDk7TvQFPE35KRbl3TIjLCVfACJoC/w530-h497-n-rw/ChrisSutton-20180803--04058-at-the-flower-farm.jpg',
-          size: 'medium',
+            "https://lh3.googleusercontent.com/-e-TH_gArm2A/W2f4SHwFTMI/AAAAAAACCJ8/f2KpjrSlfDk7TvQFPE35KRbl3TIjLCVfACJoC/w530-h497-n-rw/ChrisSutton-20180803--04058-at-the-flower-farm.jpg",
+          size: "medium",
           sub_img:
-            'https://github.com/lxs24sxl/readme_add_pic/raw/master/vue_blog_images/cake.png',
+            "https://github.com/lxs24sxl/readme_add_pic/raw/master/vue_blog_images/cake.png",
           // sub_img: 'https://mdn.mozillademos.org/files/13502/cake.png',
           height: 264
         },
 
         {
-          id: '0017',
+          id: "0017",
           img:
-            'https://lh3.googleusercontent.com/-59eYM0JY5AY/W2f0T9vq22I/AAAAAAACCJQ/YYSndkLFTLYSEeHJN9W0yD_4RCIvTflZgCJoC/w530-h325-n-rw/ChrisSutton-20180501---philharmonie-de-paris-10.jpg',
-          size: 'small',
+            "https://lh3.googleusercontent.com/-59eYM0JY5AY/W2f0T9vq22I/AAAAAAACCJQ/YYSndkLFTLYSEeHJN9W0yD_4RCIvTflZgCJoC/w530-h325-n-rw/ChrisSutton-20180501---philharmonie-de-paris-10.jpg",
+          size: "small",
           sub_img:
-            'https://github.com/lxs24sxl/readme_add_pic/raw/master/vue_blog_images/cat.jpg',
+            "https://github.com/lxs24sxl/readme_add_pic/raw/master/vue_blog_images/cat.jpg",
           // sub_img: 'http://img.wxcha.com/file/201603/07/7ec4c7c1f7.jpg',
           height: 172
         },
         {
-          id: '0018',
+          id: "0018",
           img:
-            'https://lh3.googleusercontent.com/-cGXquY7pZpc/W2fiCjCXgGI/AAAAAAAAbBg/-cngXfQkjtgx8pejxGDm-uKXoiNWqxm0QCJoC/w530-h530-n-rw/wall-art.jpg',
-          size: 'normal',
+            "https://lh3.googleusercontent.com/-cGXquY7pZpc/W2fiCjCXgGI/AAAAAAAAbBg/-cngXfQkjtgx8pejxGDm-uKXoiNWqxm0QCJoC/w530-h530-n-rw/wall-art.jpg",
+          size: "normal",
           sub_img:
-            'https://github.com/lxs24sxl/readme_add_pic/raw/master/vue_blog_images/universal-javascript.jpg',
+            "https://github.com/lxs24sxl/readme_add_pic/raw/master/vue_blog_images/universal-javascript.jpg",
           // sub_img: 'https://dri.es/files/images/blog/universal-javascript.jpg',
           height: 282
         },
         {
-          id: '0019',
+          id: "0019",
           img:
-            'https://lh3.googleusercontent.com/-e-TH_gArm2A/W2f4SHwFTMI/AAAAAAACCJ8/f2KpjrSlfDk7TvQFPE35KRbl3TIjLCVfACJoC/w530-h497-n-rw/ChrisSutton-20180803--04058-at-the-flower-farm.jpg',
-          size: 'medium',
+            "https://lh3.googleusercontent.com/-e-TH_gArm2A/W2f4SHwFTMI/AAAAAAACCJ8/f2KpjrSlfDk7TvQFPE35KRbl3TIjLCVfACJoC/w530-h497-n-rw/ChrisSutton-20180803--04058-at-the-flower-farm.jpg",
+          size: "medium",
           sub_img:
-            'https://github.com/lxs24sxl/readme_add_pic/raw/master/vue_blog_images/cake.png',
+            "https://github.com/lxs24sxl/readme_add_pic/raw/master/vue_blog_images/cake.png",
           // sub_img: 'https://mdn.mozillademos.org/files/13502/cake.png',
           height: 264
         },
         {
-          id: '0020',
+          id: "0020",
           img:
-            'https://lh3.googleusercontent.com/-59eYM0JY5AY/W2f0T9vq22I/AAAAAAACCJQ/YYSndkLFTLYSEeHJN9W0yD_4RCIvTflZgCJoC/w530-h325-n-rw/ChrisSutton-20180501---philharmonie-de-paris-10.jpg',
+            "https://lh3.googleusercontent.com/-59eYM0JY5AY/W2f0T9vq22I/AAAAAAACCJQ/YYSndkLFTLYSEeHJN9W0yD_4RCIvTflZgCJoC/w530-h325-n-rw/ChrisSutton-20180501---philharmonie-de-paris-10.jpg",
           sub_img:
-            'https://github.com/lxs24sxl/readme_add_pic/raw/master/vue_blog_images/cat.jpg',
+            "https://github.com/lxs24sxl/readme_add_pic/raw/master/vue_blog_images/cat.jpg",
           // sub_img: 'http://img.wxcha.com/file/201603/07/7ec4c7c1f7.jpg',
-          size: 'small',
+          size: "small",
           height: 172
         }
       ],
@@ -275,10 +275,10 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(['isCanWebp'])
+    ...mapGetters(["isCanWebp"])
   },
   created() {
-    this.$store.commit('TOGGLE_BANNER', this.bannerInfo);
+    this.$store.commit("TOGGLE_BANNER", this.bannerInfo);
   },
   mounted() {
     const that = this;
@@ -334,7 +334,7 @@ export default {
   margin: 0 auto;
 }
 
-@import url('https://fonts.googleapis.com/css?family=PT+Mono');
+@import url("https://fonts.googleapis.com/css?family=PT+Mono");
 
 @function set-counter-bg-color($color) {
   @if (lightness($color) > 50) {
@@ -362,7 +362,7 @@ html {
   width: 100%;
   height: 100%;
   background: $bg;
-  font-family: 'PT Mono', monospace;
+  font-family: "PT Mono", monospace;
 }
 
 .masonry {
@@ -433,7 +433,7 @@ html {
           span {
             &:first-child {
               &::after {
-                content: '\B7';
+                content: "\B7";
                 margin: 0 0.4em;
                 color: #8f969c;
               }

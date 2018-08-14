@@ -7,10 +7,10 @@
 </template>
 
 <script>
-import { Header, AppMain, Footer } from './components/index';
+import { Header, AppMain, Footer } from "./components/index";
 
 export default {
-  name: 'Layout',
+  name: "Layout",
   components: {
     Header,
     AppMain,
