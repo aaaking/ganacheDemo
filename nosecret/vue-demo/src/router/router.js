@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 const _import = require("./_import_" + process.env.NODE_ENV)
-
+console.log('-----------------------' + process.env.NODE_ENV)
 import Layout from '@/views/layout/Layout'
 
 Vue.use(Router)
