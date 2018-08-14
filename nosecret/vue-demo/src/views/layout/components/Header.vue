@@ -138,7 +138,7 @@ export default {
   .site-header,
   .site-header.big {
     padding: 150px 0;
-    color: #fff;
+    color: #4B0082;
     h1 {
       margin-bottom: 10px;
       font-weight: bold;

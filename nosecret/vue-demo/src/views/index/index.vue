@@ -33,7 +33,7 @@ export default {
       bannerInfo: {
         title: "大家的秘密",
         subTitle: "秘密不要憋在心中，一吐为快",
-        bgImg: "http://eps.ink/img/post-bg-rwd.jpg",
+        bgImg: "https://cdn-images-1.medium.com/max/2000/0*m2L1KHdVgUBnrwOe",
         isShowBanner: true,
         size: "normal"
       },

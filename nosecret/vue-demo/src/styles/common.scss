@@ -84,12 +84,13 @@ body {
 }
 .navbar-dark {
 	.navbar-brand {
+		color: #7A378B
 	}
 	.nav-link {
 		a {
-			color: rgba(255, 255, 255, 0.5);
+			color: rgba(122,55,139, 0.5);
 			&:hover, &:focus {
-				color: rgba(255, 255, 255, 1);
+				color: rgba(122,55,139, 1);
 				text-decoration: none;
 			}
 		}
