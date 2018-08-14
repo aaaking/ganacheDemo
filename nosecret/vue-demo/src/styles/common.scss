@@ -19,9 +19,9 @@ body {
 	transition: all .3s;
 }
 .xs-navbar.default {
-	background-color: #007bff !important;
+	background-color: #97FFFF !important;
 	.xs-nav-bg {
-		background-color: #007bff !important;
+		background-color: #97FFFF !important;
 	}
 }
 .xs-navbar.fixed {
@@ -76,8 +76,8 @@ body {
 		a {
 			color: rgba(0, 0, 0, 0.6);
 			&:hover, &:focus {
-					color: rgba(0, 0, 0, 1);
-					text-decoration: none;
+				color: rgba(0, 0, 0, 1);
+				text-decoration: none;
 			}
 		}
 	}
@@ -87,7 +87,7 @@ body {
 		color: #7A378B;
 		&:hover, &:focus {
 			color: #7A378B
-	}
+		}
 	}
 	.nav-link {
 		a {
