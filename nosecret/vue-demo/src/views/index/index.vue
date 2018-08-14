@@ -159,4 +159,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.blog-panel {
+  margin: 0 0 40px 0;
+}
 </style>

@@ -1,17 +1,17 @@
 <template>
-  <div class="footer-wrapper">
+  <footer class="footer-wrapper">
     <div class="footer-link">
       <ul class="link-list">
         <!-- <li @click="switchToSite(item.link)" v-for="item in lxsLink" :key="item.site" class="link-item">
           <i :class="`iconfont icon-${item.site}`"></i>
         </li> -->
-        <li v-for="value in lxsLink" :key="value.site">
+        <li v-for="value in lxsLink" :key="value.site" class="link-li-item">
           <a :href="value.link" target="view_frame" class="link-a">{{value.site}}</a>
         </li>
       </ul>
       <div class="link-title">© 2018 · epistasis · ALL RIGHT RESERVED · 中国-浙江省-杭州市</div>
     </div>
-  </div>
+  </footer>
 </template>
 
 <script>
@@ -50,6 +50,9 @@ export default {
 }
 .footer {
   &-wrapper {
+    bottom: 0;
+    height: 80px;
+    // position: absolute;
     width: 100%;
     margin-top: 10px;
     border-top: 1px solid #eaecef;
@@ -59,7 +62,11 @@ export default {
   }
   &-link {
     width: 100%;
-    padding: 15px 0;
+    top: 50%;
+    bottom: 50%;
+    transform: translateY(-50%);
+    position: relative;
+    padding: auto 0;
     .link {
       &-list {
         display: flex;
