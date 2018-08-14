@@ -6,7 +6,7 @@
           <i :class="`iconfont icon-${item.site}`"></i>
         </li>
       </ul>
-      <div class="link-title">© 2018 · lxs24sxl · ALL RIGHT RESERVED · 中国-广东省-广州市</div>
+      <div class="link-title">© 2018 · epistasis · ALL RIGHT RESERVED · 中国-浙江省-杭州市</div>
     </div>
   </div>
 </template>
@@ -18,12 +18,16 @@ export default {
       lxsLink: [
         {
           site: "weibo",
-          link: "https://www.weibo.com/3545563737/profile?topnav=1&wvr=6"
+          link: "https://www.weibo.com/1985270673/profile?topnav=1&wvr=6"
         },
-        { site: "github", link: "https://github.com/lxs24sxl" },
+        { site: "github", link: "https://github.com/aaaking" },
         {
           site: "facebook",
-          link: "https://www.facebook.com/profile.php?id=100012801641980"
+          link: "https://www.facebook.com/profile.php?id=100012803167715"
+        },
+        {
+          site: "twitter",
+          link: "https://twitter.com/wise_Zhou"
         }
       ]
     };
