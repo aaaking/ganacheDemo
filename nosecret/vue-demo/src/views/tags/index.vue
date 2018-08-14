@@ -21,7 +21,7 @@ export default {
       bannerInfo: {
         title: "标签",
         subTitle: "Be My Personal Best",
-        bgImg: "http://eps.ink/img/tag-bg.jpg",
+        bgImg: "https://cdn-images-1.medium.com/max/800/1*-Nn4vZeuKrQP2wu_T2gJRw.jpeg",
         isShowBanner: true,
         size: "small"
       },

@@ -84,7 +84,10 @@ body {
 }
 .navbar-dark {
 	.navbar-brand {
-		color: #7A378B
+		color: #7A378B;
+		&:hover, &:focus {
+			color: #7A378B
+	}
 	}
 	.nav-link {
 		a {

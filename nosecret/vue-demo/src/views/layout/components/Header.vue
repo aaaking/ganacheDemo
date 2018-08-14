@@ -2,7 +2,10 @@
   <div class="containner">
     <b-navbar toggleable="md" :type="isShowNav && bannerInfo.isShowBanner? 'light': 'dark'" variant="white" :class="{'xs-navbar': true, 'default': !bannerInfo.isShowBanner, 'fixed': isFixed}">
       <!-- 标题orLogo -->
-      <b-navbar-brand href="#">epistasis</b-navbar-brand>
+      <b-navbar-brand @click.capture="goHome" href="#">
+        NoSecret
+      </b-navbar-brand>
+      
       <!-- 导航栏 -->
       <b-collapse is-nav id="nav_collapse" @click="toggleNav">
         <b-navbar-nav class="ml-auto" right>
@@ -65,6 +68,9 @@ export default {
     ...mapGetters(["bannerInfo"])
   },
   methods: {
+    goHome() {
+      this.$router.push('/')
+    },
     toggleNavItem(src) {
       if (this.$route.path === src) {
         this.isShowNav = true;
@@ -138,7 +144,7 @@ export default {
   .site-header,
   .site-header.big {
     padding: 150px 0;
-    color: #4B0082;
+    color: #4b0082;
     h1 {
       margin-bottom: 10px;
       font-weight: bold;
