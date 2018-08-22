@@ -25,6 +25,7 @@ yuyangdeMacBook-Pro:TestTruffle yuyang$ truffle console
 truffle(development)> HelloWorld.deployed().then(function(instance){contract= instance;});
 
 curl -i -H 'Content-Type: application/json' -X POST --data '{"jsonrpc":"2.0","method":"net_version","params":[]}' http://localhost:8545
+curl  -i -H 'Content-Type: application/json' -X POST --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1}' http://47.52.224.7:8545
 
 web3.BigNumber             web3.createBatch           web3.fromAscii             web3.fromDecimal
 web3.fromICAP              web3.fromUtf8              web3.fromWei               web3.isAddress
