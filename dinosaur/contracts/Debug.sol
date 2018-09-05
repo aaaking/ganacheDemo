@@ -7,18 +7,18 @@ contract Debug {
     bool public unit_test = false;
 
     function logstring(string s) internal {
-        LogUint(s, 0);
+        emit LogUint(s, 0);
     }
 
     function loguint(string s, uint256 v) internal {
-        LogUint(s, v);
+        emit LogUint(s, v);
     }
 
     function logbool(string s, bool b) internal {
         if (b) {
-            LogUint(s, 1);
+            emit LogUint(s, 1);
         } else {
-            LogUint(s, 0);
+            emit LogUint(s, 0);
         }
     }
 

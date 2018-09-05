@@ -1,5 +1,5 @@
-var Migrations = artifacts.require("./Migrations.sol");
+var AncientGate = artifacts.require("./AncientGate.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(Migrations);
+  deployer.deploy(AncientGate);
 };

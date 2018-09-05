@@ -46,7 +46,7 @@ contract AuctionBase is ControlCenter {
 
         logstring("AuctionCreated event");
 
-        AuctionCreated(uint256(_tokenId),
+        emit AuctionCreated(uint256(_tokenId),
                        uint256(_auction.startingPrice),
                        uint256(_auction.endingPrice),
                        uint256(_auction.duration));
@@ -58,7 +58,7 @@ contract AuctionBase is ControlCenter {
 
         delete tokenIdToAuction[_tokenId];
 
-        AuctionCancelled(_tokenId);
+        emit AuctionCancelled(_tokenId);
     }
 
 
@@ -82,7 +82,7 @@ contract AuctionBase is ControlCenter {
             seller.transfer(sellerReturn);
         }
 
-        AuctionSuccessful(_tokenId, price, msg.sender);
+        emit AuctionSuccessful(_tokenId, price, msg.sender);
 
         return price;
     }

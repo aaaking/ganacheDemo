@@ -7,16 +7,24 @@ import "./Auction/SiringDutchAuction.sol";
 
 // 远古之门维护了各个合约的地址，便于后的维护和更新
 //
-//      - AcientGate: 远古之门，固定地址的入口合约，管理其他合约的入口
+//      - AncientGate: 远古之门，固定地址的入口合约，管理其他合约的入口
 //      - Jurassic: 侏罗纪，游戏主合约
 
-contract AcientGate is ControlCenter {
+contract AncientGate is ControlCenter {
     Jurassic public jurassic;
     SaleDutchAuction public saleDutchAuction;
     SiringDutchAuction public siringDutchAuction;
 
-    // event AcientGateOpened();
-    // event AcientGateClosed();
+    function isCTO() public view returns(bool) {
+        return msg.sender == ctoAddress;
+    }
+
+    function test(address p) public view onlyCTO returns(address) {
+        return p;
+    }
+
+    // event AncientGateOpened();
+    // event AncientGateClosed();
 
     // 设置游戏主合约的地址
     function setJurassicContract(address _address) public onlyCTO {
@@ -51,13 +59,13 @@ contract AcientGate is ControlCenter {
     //     jurassic.unpause();
     //     saleDutchAuction.unpause();
 
-    //     AcientGateOpened();
+    //     AncientGateOpened();
     // }
 
     // function closeTheGate() public onlyCLevel {
     //     jurassic.pause();
     //     saleDutchAuction.pause();
 
-    //     AcientGateClosed();
+    //     AncientGateClosed();
     // }
 }

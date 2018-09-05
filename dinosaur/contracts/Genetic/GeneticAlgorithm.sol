@@ -25,7 +25,7 @@ contract GeneticAlgorithm is GeneticAlgorithmInterface, ControlCenter {
     // 4种恐龙
     uint256 constant KIND_COUNT = 4;
 
-    function GeneticAlgorithm(address _jurassic) public {
+    constructor(address _jurassic) public {
         jurassicAddr = _jurassic;
     }
 
@@ -99,7 +99,13 @@ contract GeneticAlgorithm is GeneticAlgorithmInterface, ControlCenter {
     }
 
     function _inheritedSingleAttribute (uint256 _genes, uint256 _randValue, bool _isLucky) private pure returns (uint256) {
-        var (gene0, gene1, gene2, gene3, gene4, gene5) = _parseOneGene(_genes, _isLucky);
+        uint256 gene0;
+        uint256 gene1;
+        uint256 gene2;
+        uint256 gene3;
+        uint256 gene4;
+        uint256 gene5;
+        (gene0, gene1, gene2, gene3, gene4, gene5) = _parseOneGene(_genes, _isLucky);
 
         uint256 genes = gene0;
         if (!_isLucky) {
@@ -193,10 +199,17 @@ contract GeneticAlgorithm is GeneticAlgorithmInterface, ControlCenter {
     // 属性类型(10位) + 附属基因1(10位) + 1的显性隐性标志(1位) + ...
     // 每个属性共占 65 位（幸运只有两个附属基因，共占32位）,是个属性共需要 65 * 3 + 32 = 227位
     function _buildSingleAttribute (uint256 _seed, bool _isLucky) private view returns (uint256) {
-        var (gene0, rand1, rand2, rand3, rand4, rand5) = _multipleRand2E14(1, 1000, _seed + 1);
+        uint256 seedP = _seed + 1;
+        uint256 gene0;
+        uint256 rand1;
+        uint256 rand2;
+        uint256 rand3;
+        uint256 rand4;
+        uint256 rand5;
+        (gene0, rand1, rand2, rand3, rand4, rand5) = _multipleRand2E14(1, 1000, seedP);
 
         // 显性还是隐性的边界大小，超过为显性，否则为隐性
-        uint256 hideOrShowBounds = _randBetween(1, 1000, _seed + 1);
+        uint256 hideOrShowBounds = _randBetween(1, 1000, seedP);
 
         uint256 ratioStart = 0;
         uint256 ratioEnd = 1;
@@ -271,7 +284,7 @@ contract GeneticAlgorithm is GeneticAlgorithmInterface, ControlCenter {
 
     // 随机一个包含_lower但不包含_upper的整数
     function _randBetween (uint256 _lower, uint256 _upper, uint256 _seed) private view returns (uint256) {
-        uint256 rand = uint256(keccak256(block.number + 1024, now)) + uint256(keccak256(block.number % _seed, _seed));
+        uint256 rand = uint256(keccak256(abi.encodePacked(block.number + 1024, now))) + uint256(keccak256(abi.encodePacked(block.number % _seed, _seed)));
 
         return (rand % (_upper - _lower)) + _lower;
     }
@@ -282,7 +295,7 @@ contract GeneticAlgorithm is GeneticAlgorithmInterface, ControlCenter {
     {
         require(_upper < 65536);
 
-        uint256 rand = uint256(keccak256(block.number + 1024, now)) + uint256(keccak256(block.number % _seed, _seed));
+        uint256 rand = uint256(keccak256(abi.encodePacked(block.number + 1024, now))) + uint256(keccak256(abi.encodePacked(block.number % _seed, _seed)));
 
         rand1 = ((rand & MULTIPLE_RAND_MASK) % (_upper - _lower)) + _lower;
         rand2 = (((rand >> 16) & MULTIPLE_RAND_MASK) % (_upper - _lower)) + _lower;

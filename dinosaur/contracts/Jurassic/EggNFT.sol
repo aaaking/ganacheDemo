@@ -49,7 +49,7 @@ contract EggNFT is DinosaurBase, ERC721 {
 
         dinosaurIndexToApproved[_tokenId] = _to;
 
-        Approval(msg.sender, _to, _tokenId);
+        emit Approval(msg.sender, _to, _tokenId);
     }
 
     function transferFrom(address _from, address _to, uint256 _tokenId) public whenNotPaused {

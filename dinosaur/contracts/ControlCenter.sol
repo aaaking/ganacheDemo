@@ -22,7 +22,7 @@ contract ControlCenter is Debug, Utils {
     // 控制合约是否暂停
     bool public paused = false;
 
-    function ControlCenter () internal {
+    constructor() internal {
         paused = true;
 
         ceoAddress = msg.sender;

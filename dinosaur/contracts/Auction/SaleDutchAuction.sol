@@ -41,6 +41,6 @@ contract SaleDutchAuction is DutchAuction {
     function withdrawBalance() external onlyCFO {
         address nftAddress = address(nftEggContract);
 
-        nftAddress.transfer(this.balance);
+        nftAddress.transfer(address(this).balance);
     }
 }

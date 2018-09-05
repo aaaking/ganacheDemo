@@ -32,7 +32,7 @@ contract DinosaurSeeking is Minting {
         _triggerSeekingCooldown(_dinosaur);
 
         address _owner = dinosaurIndexToOwner[_id];
-        StartSeeking(_owner, _id);
+        emit StartSeeking(_owner, _id);
     }
 
     // 创建战利品
@@ -48,6 +48,6 @@ contract DinosaurSeeking is Minting {
         uint256 _kindIndex = 0;
         uint256 _categoryIndex = 0; // 0，恐龙；1，饰品
 
-        TrophiesCollected(_owner, _newEggId, _kindIndex, _categoryIndex);
+        emit TrophiesCollected(_owner, _newEggId, _kindIndex, _categoryIndex);
     }
 }

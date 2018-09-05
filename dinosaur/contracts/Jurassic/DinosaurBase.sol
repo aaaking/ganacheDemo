@@ -160,7 +160,7 @@ contract DinosaurBase is ControlCenter {
         }
 
         // 激发一个事件
-        Transfer(_from, _to, _tokenId);
+        emit Transfer(_from, _to, _tokenId);
     }
 
     /// 创建一个恐龙蛋，返回恐龙蛋的ID
@@ -204,7 +204,7 @@ contract DinosaurBase is ControlCenter {
         _transfer(0, _owner, _newTokenId);
 
         // 激发恐龙蛋出生事件
-        EggBirth(_owner, _newTokenId, uint256(_motherId), uint256(_fatherId), _egg.genesF, _egg.genesM);
+        emit EggBirth(_owner, _newTokenId, uint256(_motherId), uint256(_fatherId), _egg.genesF, _egg.genesM);
 
         return _newTokenId;
     }
@@ -239,7 +239,7 @@ contract DinosaurBase is ControlCenter {
         address _owner = dinosaurIndexToOwner[_eggId];
 
         // 激发恐龙出生事件
-        DinosaurHatched(_owner, _eggId);
+        emit DinosaurHatched(_owner, _eggId);
     }
 
     // 如果不是在拍卖、生育、探索，则是空闲的

@@ -11,7 +11,7 @@ contract Jurassic is Auction, DinosaurSeeking {
     // 用于确保是正确的合约被设置了
     bool public constant IS_JURASSIC = true;
 
-    function Jurassic() public {
+    constructor() public {
 
         // 每次部署合约，创造一个0代恐龙蛋
         if (dnsrToken.length == 0) {
@@ -100,7 +100,7 @@ contract Jurassic is Auction, DinosaurSeeking {
         uint64 hatchEndTime = _startHatchingEgg(_id);
 
         // 发送一个事件
-        HatchingEgg(_own, _id, hatchEndTime);
+        emit HatchingEgg(_own, _id, hatchEndTime);
     }
 
     // // 允许 _addr 地址的恐龙对你的 _fatherId 的恐龙进行繁殖
@@ -147,8 +147,10 @@ contract Jurassic is Auction, DinosaurSeeking {
 
             DinosaurEgg storage _eggM = eggs[_motherId];
             DinosaurEgg storage _eggF = eggs[_fatherId];
-
-            var (_genesF, _genesM, _hatchCDIndex) = geneticAlgorithm.inheritedGenes(_eggM.genesF, _eggM.genesM, _eggF.genesF, _eggF.genesM);
+            uint256 _genesF;
+            uint256 _genesM;
+            uint256 _hatchCDIndex;
+            (_genesF, _genesM, _hatchCDIndex) = geneticAlgorithm.inheritedGenes(_eggM.genesF, _eggM.genesM, _eggF.genesF, _eggF.genesM);
 
             address _owner = dinosaurIndexToOwner[_motherId];
 
@@ -196,7 +198,7 @@ contract Jurassic is Auction, DinosaurSeeking {
 
         Dinosaur storage _dinosaur = dinosaurs[_id];
 
-        var layTime = cooldowns[_dinosaur.breedingCDIndex] * 2;
+        uint32 layTime = cooldowns[_dinosaur.breedingCDIndex] * 2;
         return (layTime <= now);
     }
 
@@ -291,6 +293,6 @@ contract Jurassic is Auction, DinosaurSeeking {
 
     // CFO 权限
     function withdrawBalance() external onlyCFO {
-        cfoAddress.transfer(this.balance);
+        cfoAddress.transfer(address(this).balance);
     }
 }

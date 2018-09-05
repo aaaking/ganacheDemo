@@ -75,7 +75,7 @@ contract DinosaurBreeding is Minting {
 
         _dinosaurM.attributes -= 4;
 
-        Pregnant(dinosaurIndexToOwner[_motherId], _motherId, _fatherId);
+        emit Pregnant(dinosaurIndexToOwner[_motherId], _motherId, _fatherId);
     }
 
     // 允许 _addr 地址的恐龙 (_motherId) 对你的 _fatherId 的恐龙进行繁殖

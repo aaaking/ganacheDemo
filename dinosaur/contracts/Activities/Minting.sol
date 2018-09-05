@@ -40,8 +40,11 @@ contract Minting is EggNFT {
     function _createGen0Egg (address _owner) internal returns (uint256) {
 
         require(gen0CreatedCount < gen0CreationLimit);
-
-        var (_genesF, _genesM, _kind, _hatchCDIndex) = geneticAlgorithm.buildGen0Genes(gen0CreatedCount);
+        uint256 _genesF;
+        uint256 _genesM;
+        uint256 _kind;
+        uint256 _hatchCDIndex;
+        (_genesF, _genesM, _kind, _hatchCDIndex) = geneticAlgorithm.buildGen0Genes(gen0CreatedCount);
 
         uint256 _newId = _createEgg(_kind, 0, 0, 0, _genesF, _genesM, _hatchCDIndex, _owner);
 
