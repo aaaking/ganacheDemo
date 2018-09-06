@@ -74,14 +74,14 @@
     "absolutePath": "/D/codebase/blockchain/ganacheDemo/dinosaur/contracts/Debug.sol",
     "exportedSymbols": {
       "Debug": [
-        1392
+        1396
       ]
     },
-    "id": 1393,
+    "id": 1397,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1312,
+        "id": 1316,
         "literals": [
           "solidity",
           "^",
@@ -97,9 +97,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1392,
+        "id": 1396,
         "linearizedBaseContracts": [
-          1392
+          1396
         ],
         "name": "Debug",
         "nodeType": "ContractDefinition",
@@ -107,20 +107,20 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 1318,
+            "id": 1322,
             "name": "LogUint",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 1317,
+              "id": 1321,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1314,
+                  "id": 1318,
                   "indexed": false,
                   "name": "label",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1318,
+                  "scope": 1322,
                   "src": "61:12:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -129,7 +129,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1313,
+                    "id": 1317,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "61:6:7",
@@ -143,11 +143,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 1316,
+                  "id": 1320,
                   "indexed": false,
                   "name": "value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1318,
+                  "scope": 1322,
                   "src": "75:13:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -156,7 +156,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1315,
+                    "id": 1319,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "75:7:7",
@@ -176,20 +176,20 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 1324,
+            "id": 1328,
             "name": "LogInt",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 1323,
+              "id": 1327,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1320,
+                  "id": 1324,
                   "indexed": false,
                   "name": "label",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1324,
+                  "scope": 1328,
                   "src": "108:12:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -198,7 +198,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1319,
+                    "id": 1323,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "108:6:7",
@@ -212,11 +212,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 1322,
+                  "id": 1326,
                   "indexed": false,
                   "name": "value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1324,
+                  "scope": 1328,
                   "src": "122:12:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -225,7 +225,7 @@
                     "typeString": "int256"
                   },
                   "typeName": {
-                    "id": 1321,
+                    "id": 1325,
                     "name": "int256",
                     "nodeType": "ElementaryTypeName",
                     "src": "122:6:7",
@@ -244,10 +244,10 @@
           },
           {
             "constant": false,
-            "id": 1327,
+            "id": 1331,
             "name": "unit_test",
             "nodeType": "VariableDeclaration",
-            "scope": 1392,
+            "scope": 1396,
             "src": "142:29:7",
             "stateVariable": true,
             "storageLocation": "default",
@@ -256,7 +256,7 @@
               "typeString": "bool"
             },
             "typeName": {
-              "id": 1325,
+              "id": 1329,
               "name": "bool",
               "nodeType": "ElementaryTypeName",
               "src": "142:4:7",
@@ -268,7 +268,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "66616c7365",
-              "id": 1326,
+              "id": 1330,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -287,7 +287,7 @@
           },
           {
             "body": {
-              "id": 1337,
+              "id": 1341,
               "nodeType": "Block",
               "src": "216:35:7",
               "statements": [
@@ -297,11 +297,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1333,
+                        "id": 1337,
                         "name": "s",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1329,
+                        "referencedDeclaration": 1333,
                         "src": "239:1:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -311,7 +311,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "30",
-                        "id": 1334,
+                        "id": 1338,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -338,18 +338,18 @@
                           "typeString": "int_const 0"
                         }
                       ],
-                      "id": 1332,
+                      "id": 1336,
                       "name": "LogUint",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1318,
+                      "referencedDeclaration": 1322,
                       "src": "231:7:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_string_memory_ptr_$_t_uint256_$returns$__$",
                         "typeString": "function (string memory,uint256)"
                       }
                     },
-                    "id": 1335,
+                    "id": 1339,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -363,14 +363,14 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1336,
+                  "id": 1340,
                   "nodeType": "EmitStatement",
                   "src": "226:18:7"
                 }
               ]
             },
             "documentation": null,
-            "id": 1338,
+            "id": 1342,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -378,15 +378,15 @@
             "name": "logstring",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1330,
+              "id": 1334,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1329,
+                  "id": 1333,
                   "name": "s",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1338,
+                  "scope": 1342,
                   "src": "197:8:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -395,7 +395,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1328,
+                    "id": 1332,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "197:6:7",
@@ -412,12 +412,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 1331,
+              "id": 1335,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "216:0:7"
             },
-            "scope": 1392,
+            "scope": 1396,
             "src": "178:73:7",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -425,7 +425,7 @@
           },
           {
             "body": {
-              "id": 1350,
+              "id": 1354,
               "nodeType": "Block",
               "src": "304:35:7",
               "statements": [
@@ -435,11 +435,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1346,
+                        "id": 1350,
                         "name": "s",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1340,
+                        "referencedDeclaration": 1344,
                         "src": "327:1:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -448,11 +448,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1347,
+                        "id": 1351,
                         "name": "v",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1342,
+                        "referencedDeclaration": 1346,
                         "src": "330:1:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -471,18 +471,18 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 1345,
+                      "id": 1349,
                       "name": "LogUint",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1318,
+                      "referencedDeclaration": 1322,
                       "src": "319:7:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_string_memory_ptr_$_t_uint256_$returns$__$",
                         "typeString": "function (string memory,uint256)"
                       }
                     },
-                    "id": 1348,
+                    "id": 1352,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -496,14 +496,14 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1349,
+                  "id": 1353,
                   "nodeType": "EmitStatement",
                   "src": "314:18:7"
                 }
               ]
             },
             "documentation": null,
-            "id": 1351,
+            "id": 1355,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -511,15 +511,15 @@
             "name": "loguint",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1343,
+              "id": 1347,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1340,
+                  "id": 1344,
                   "name": "s",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1351,
+                  "scope": 1355,
                   "src": "274:8:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -528,7 +528,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1339,
+                    "id": 1343,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "274:6:7",
@@ -542,10 +542,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1342,
+                  "id": 1346,
                   "name": "v",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1351,
+                  "scope": 1355,
                   "src": "284:9:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -554,7 +554,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1341,
+                    "id": 1345,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "284:7:7",
@@ -571,12 +571,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 1344,
+              "id": 1348,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "304:0:7"
             },
-            "scope": 1392,
+            "scope": 1396,
             "src": "257:82:7",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -584,18 +584,18 @@
           },
           {
             "body": {
-              "id": 1372,
+              "id": 1376,
               "nodeType": "Block",
               "src": "389:115:7",
               "statements": [
                 {
                   "condition": {
                     "argumentTypes": null,
-                    "id": 1358,
+                    "id": 1362,
                     "name": "b",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 1355,
+                    "referencedDeclaration": 1359,
                     "src": "403:1:7",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
@@ -603,7 +603,7 @@
                     }
                   },
                   "falseBody": {
-                    "id": 1370,
+                    "id": 1374,
                     "nodeType": "Block",
                     "src": "455:43:7",
                     "statements": [
@@ -613,11 +613,11 @@
                           "arguments": [
                             {
                               "argumentTypes": null,
-                              "id": 1366,
+                              "id": 1370,
                               "name": "s",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1353,
+                              "referencedDeclaration": 1357,
                               "src": "482:1:7",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_string_memory_ptr",
@@ -627,7 +627,7 @@
                             {
                               "argumentTypes": null,
                               "hexValue": "30",
-                              "id": 1367,
+                              "id": 1371,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -654,18 +654,18 @@
                                 "typeString": "int_const 0"
                               }
                             ],
-                            "id": 1365,
+                            "id": 1369,
                             "name": "LogUint",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1318,
+                            "referencedDeclaration": 1322,
                             "src": "474:7:7",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_event_nonpayable$_t_string_memory_ptr_$_t_uint256_$returns$__$",
                               "typeString": "function (string memory,uint256)"
                             }
                           },
-                          "id": 1368,
+                          "id": 1372,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -679,17 +679,17 @@
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 1369,
+                        "id": 1373,
                         "nodeType": "EmitStatement",
                         "src": "469:18:7"
                       }
                     ]
                   },
-                  "id": 1371,
+                  "id": 1375,
                   "nodeType": "IfStatement",
                   "src": "399:99:7",
                   "trueBody": {
-                    "id": 1364,
+                    "id": 1368,
                     "nodeType": "Block",
                     "src": "406:43:7",
                     "statements": [
@@ -699,11 +699,11 @@
                           "arguments": [
                             {
                               "argumentTypes": null,
-                              "id": 1360,
+                              "id": 1364,
                               "name": "s",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1353,
+                              "referencedDeclaration": 1357,
                               "src": "433:1:7",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_string_memory_ptr",
@@ -713,7 +713,7 @@
                             {
                               "argumentTypes": null,
                               "hexValue": "31",
-                              "id": 1361,
+                              "id": 1365,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -740,18 +740,18 @@
                                 "typeString": "int_const 1"
                               }
                             ],
-                            "id": 1359,
+                            "id": 1363,
                             "name": "LogUint",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1318,
+                            "referencedDeclaration": 1322,
                             "src": "425:7:7",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_event_nonpayable$_t_string_memory_ptr_$_t_uint256_$returns$__$",
                               "typeString": "function (string memory,uint256)"
                             }
                           },
-                          "id": 1362,
+                          "id": 1366,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -765,7 +765,7 @@
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 1363,
+                        "id": 1367,
                         "nodeType": "EmitStatement",
                         "src": "420:18:7"
                       }
@@ -775,7 +775,7 @@
               ]
             },
             "documentation": null,
-            "id": 1373,
+            "id": 1377,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -783,15 +783,15 @@
             "name": "logbool",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1356,
+              "id": 1360,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1353,
+                  "id": 1357,
                   "name": "s",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1373,
+                  "scope": 1377,
                   "src": "362:8:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -800,7 +800,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1352,
+                    "id": 1356,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "362:6:7",
@@ -814,10 +814,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1355,
+                  "id": 1359,
                   "name": "b",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1373,
+                  "scope": 1377,
                   "src": "372:6:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -826,7 +826,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 1354,
+                    "id": 1358,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "372:4:7",
@@ -843,12 +843,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 1357,
+              "id": 1361,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "389:0:7"
             },
-            "scope": 1392,
+            "scope": 1396,
             "src": "345:159:7",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -856,33 +856,33 @@
           },
           {
             "body": {
-              "id": 1380,
+              "id": 1384,
               "nodeType": "Block",
               "src": "560:27:7",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1378,
+                    "id": 1382,
                     "name": "now",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 3889,
+                    "referencedDeclaration": 3893,
                     "src": "577:3:7",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 1377,
-                  "id": 1379,
+                  "functionReturnParameters": 1381,
+                  "id": 1383,
                   "nodeType": "Return",
                   "src": "570:10:7"
                 }
               ]
             },
             "documentation": null,
-            "id": 1381,
+            "id": 1385,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -890,22 +890,22 @@
             "name": "nowtime",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1374,
+              "id": 1378,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "527:2:7"
             },
             "payable": false,
             "returnParameters": {
-              "id": 1377,
+              "id": 1381,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1376,
+                  "id": 1380,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1381,
+                  "scope": 1385,
                   "src": "551:7:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -914,7 +914,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1375,
+                    "id": 1379,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "551:7:7",
@@ -929,7 +929,7 @@
               ],
               "src": "550:9:7"
             },
-            "scope": 1392,
+            "scope": 1396,
             "src": "510:77:7",
             "stateMutability": "view",
             "superFunction": null,
@@ -937,25 +937,25 @@
           },
           {
             "body": {
-              "id": 1390,
+              "id": 1394,
               "nodeType": "Block",
               "src": "641:33:7",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1388,
+                    "id": 1392,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 1386,
+                      "id": 1390,
                       "name": "unit_test",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1327,
+                      "referencedDeclaration": 1331,
                       "src": "651:9:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -966,11 +966,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 1387,
+                      "id": 1391,
                       "name": "flag",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1383,
+                      "referencedDeclaration": 1387,
                       "src": "663:4:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -983,14 +983,14 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 1389,
+                  "id": 1393,
                   "nodeType": "ExpressionStatement",
                   "src": "651:16:7"
                 }
               ]
             },
             "documentation": null,
-            "id": 1391,
+            "id": 1395,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -998,15 +998,15 @@
             "name": "enableUnitTest",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1384,
+              "id": 1388,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1383,
+                  "id": 1387,
                   "name": "flag",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1391,
+                  "scope": 1395,
                   "src": "621:9:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1015,7 +1015,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 1382,
+                    "id": 1386,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "621:4:7",
@@ -1032,19 +1032,19 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 1385,
+              "id": 1389,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "641:0:7"
             },
-            "scope": 1392,
+            "scope": 1396,
             "src": "597:77:7",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "internal"
           }
         ],
-        "scope": 1393,
+        "scope": 1397,
         "src": "26:654:7"
       }
     ],
@@ -1054,14 +1054,14 @@
     "absolutePath": "/D/codebase/blockchain/ganacheDemo/dinosaur/contracts/Debug.sol",
     "exportedSymbols": {
       "Debug": [
-        1392
+        1396
       ]
     },
-    "id": 1393,
+    "id": 1397,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 1312,
+        "id": 1316,
         "literals": [
           "solidity",
           "^",
@@ -1077,9 +1077,9 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 1392,
+        "id": 1396,
         "linearizedBaseContracts": [
-          1392
+          1396
         ],
         "name": "Debug",
         "nodeType": "ContractDefinition",
@@ -1087,20 +1087,20 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 1318,
+            "id": 1322,
             "name": "LogUint",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 1317,
+              "id": 1321,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1314,
+                  "id": 1318,
                   "indexed": false,
                   "name": "label",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1318,
+                  "scope": 1322,
                   "src": "61:12:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1109,7 +1109,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1313,
+                    "id": 1317,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "61:6:7",
@@ -1123,11 +1123,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 1316,
+                  "id": 1320,
                   "indexed": false,
                   "name": "value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1318,
+                  "scope": 1322,
                   "src": "75:13:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1136,7 +1136,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1315,
+                    "id": 1319,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "75:7:7",
@@ -1156,20 +1156,20 @@
           {
             "anonymous": false,
             "documentation": null,
-            "id": 1324,
+            "id": 1328,
             "name": "LogInt",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 1323,
+              "id": 1327,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1320,
+                  "id": 1324,
                   "indexed": false,
                   "name": "label",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1324,
+                  "scope": 1328,
                   "src": "108:12:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1178,7 +1178,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1319,
+                    "id": 1323,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "108:6:7",
@@ -1192,11 +1192,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 1322,
+                  "id": 1326,
                   "indexed": false,
                   "name": "value",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1324,
+                  "scope": 1328,
                   "src": "122:12:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1205,7 +1205,7 @@
                     "typeString": "int256"
                   },
                   "typeName": {
-                    "id": 1321,
+                    "id": 1325,
                     "name": "int256",
                     "nodeType": "ElementaryTypeName",
                     "src": "122:6:7",
@@ -1224,10 +1224,10 @@
           },
           {
             "constant": false,
-            "id": 1327,
+            "id": 1331,
             "name": "unit_test",
             "nodeType": "VariableDeclaration",
-            "scope": 1392,
+            "scope": 1396,
             "src": "142:29:7",
             "stateVariable": true,
             "storageLocation": "default",
@@ -1236,7 +1236,7 @@
               "typeString": "bool"
             },
             "typeName": {
-              "id": 1325,
+              "id": 1329,
               "name": "bool",
               "nodeType": "ElementaryTypeName",
               "src": "142:4:7",
@@ -1248,7 +1248,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "66616c7365",
-              "id": 1326,
+              "id": 1330,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -1267,7 +1267,7 @@
           },
           {
             "body": {
-              "id": 1337,
+              "id": 1341,
               "nodeType": "Block",
               "src": "216:35:7",
               "statements": [
@@ -1277,11 +1277,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1333,
+                        "id": 1337,
                         "name": "s",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1329,
+                        "referencedDeclaration": 1333,
                         "src": "239:1:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -1291,7 +1291,7 @@
                       {
                         "argumentTypes": null,
                         "hexValue": "30",
-                        "id": 1334,
+                        "id": 1338,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": true,
@@ -1318,18 +1318,18 @@
                           "typeString": "int_const 0"
                         }
                       ],
-                      "id": 1332,
+                      "id": 1336,
                       "name": "LogUint",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1318,
+                      "referencedDeclaration": 1322,
                       "src": "231:7:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_string_memory_ptr_$_t_uint256_$returns$__$",
                         "typeString": "function (string memory,uint256)"
                       }
                     },
-                    "id": 1335,
+                    "id": 1339,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1343,14 +1343,14 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1336,
+                  "id": 1340,
                   "nodeType": "EmitStatement",
                   "src": "226:18:7"
                 }
               ]
             },
             "documentation": null,
-            "id": 1338,
+            "id": 1342,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -1358,15 +1358,15 @@
             "name": "logstring",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1330,
+              "id": 1334,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1329,
+                  "id": 1333,
                   "name": "s",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1338,
+                  "scope": 1342,
                   "src": "197:8:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1375,7 +1375,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1328,
+                    "id": 1332,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "197:6:7",
@@ -1392,12 +1392,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 1331,
+              "id": 1335,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "216:0:7"
             },
-            "scope": 1392,
+            "scope": 1396,
             "src": "178:73:7",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1405,7 +1405,7 @@
           },
           {
             "body": {
-              "id": 1350,
+              "id": 1354,
               "nodeType": "Block",
               "src": "304:35:7",
               "statements": [
@@ -1415,11 +1415,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 1346,
+                        "id": 1350,
                         "name": "s",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1340,
+                        "referencedDeclaration": 1344,
                         "src": "327:1:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -1428,11 +1428,11 @@
                       },
                       {
                         "argumentTypes": null,
-                        "id": 1347,
+                        "id": 1351,
                         "name": "v",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 1342,
+                        "referencedDeclaration": 1346,
                         "src": "330:1:7",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -1451,18 +1451,18 @@
                           "typeString": "uint256"
                         }
                       ],
-                      "id": 1345,
+                      "id": 1349,
                       "name": "LogUint",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1318,
+                      "referencedDeclaration": 1322,
                       "src": "319:7:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_string_memory_ptr_$_t_uint256_$returns$__$",
                         "typeString": "function (string memory,uint256)"
                       }
                     },
-                    "id": 1348,
+                    "id": 1352,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1476,14 +1476,14 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 1349,
+                  "id": 1353,
                   "nodeType": "EmitStatement",
                   "src": "314:18:7"
                 }
               ]
             },
             "documentation": null,
-            "id": 1351,
+            "id": 1355,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -1491,15 +1491,15 @@
             "name": "loguint",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1343,
+              "id": 1347,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1340,
+                  "id": 1344,
                   "name": "s",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1351,
+                  "scope": 1355,
                   "src": "274:8:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1508,7 +1508,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1339,
+                    "id": 1343,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "274:6:7",
@@ -1522,10 +1522,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1342,
+                  "id": 1346,
                   "name": "v",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1351,
+                  "scope": 1355,
                   "src": "284:9:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1534,7 +1534,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1341,
+                    "id": 1345,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "284:7:7",
@@ -1551,12 +1551,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 1344,
+              "id": 1348,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "304:0:7"
             },
-            "scope": 1392,
+            "scope": 1396,
             "src": "257:82:7",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1564,18 +1564,18 @@
           },
           {
             "body": {
-              "id": 1372,
+              "id": 1376,
               "nodeType": "Block",
               "src": "389:115:7",
               "statements": [
                 {
                   "condition": {
                     "argumentTypes": null,
-                    "id": 1358,
+                    "id": 1362,
                     "name": "b",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 1355,
+                    "referencedDeclaration": 1359,
                     "src": "403:1:7",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
@@ -1583,7 +1583,7 @@
                     }
                   },
                   "falseBody": {
-                    "id": 1370,
+                    "id": 1374,
                     "nodeType": "Block",
                     "src": "455:43:7",
                     "statements": [
@@ -1593,11 +1593,11 @@
                           "arguments": [
                             {
                               "argumentTypes": null,
-                              "id": 1366,
+                              "id": 1370,
                               "name": "s",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1353,
+                              "referencedDeclaration": 1357,
                               "src": "482:1:7",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_string_memory_ptr",
@@ -1607,7 +1607,7 @@
                             {
                               "argumentTypes": null,
                               "hexValue": "30",
-                              "id": 1367,
+                              "id": 1371,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -1634,18 +1634,18 @@
                                 "typeString": "int_const 0"
                               }
                             ],
-                            "id": 1365,
+                            "id": 1369,
                             "name": "LogUint",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1318,
+                            "referencedDeclaration": 1322,
                             "src": "474:7:7",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_event_nonpayable$_t_string_memory_ptr_$_t_uint256_$returns$__$",
                               "typeString": "function (string memory,uint256)"
                             }
                           },
-                          "id": 1368,
+                          "id": 1372,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1659,17 +1659,17 @@
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 1369,
+                        "id": 1373,
                         "nodeType": "EmitStatement",
                         "src": "469:18:7"
                       }
                     ]
                   },
-                  "id": 1371,
+                  "id": 1375,
                   "nodeType": "IfStatement",
                   "src": "399:99:7",
                   "trueBody": {
-                    "id": 1364,
+                    "id": 1368,
                     "nodeType": "Block",
                     "src": "406:43:7",
                     "statements": [
@@ -1679,11 +1679,11 @@
                           "arguments": [
                             {
                               "argumentTypes": null,
-                              "id": 1360,
+                              "id": 1364,
                               "name": "s",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1353,
+                              "referencedDeclaration": 1357,
                               "src": "433:1:7",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_string_memory_ptr",
@@ -1693,7 +1693,7 @@
                             {
                               "argumentTypes": null,
                               "hexValue": "31",
-                              "id": 1361,
+                              "id": 1365,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": true,
@@ -1720,18 +1720,18 @@
                                 "typeString": "int_const 1"
                               }
                             ],
-                            "id": 1359,
+                            "id": 1363,
                             "name": "LogUint",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1318,
+                            "referencedDeclaration": 1322,
                             "src": "425:7:7",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_event_nonpayable$_t_string_memory_ptr_$_t_uint256_$returns$__$",
                               "typeString": "function (string memory,uint256)"
                             }
                           },
-                          "id": 1362,
+                          "id": 1366,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1745,7 +1745,7 @@
                             "typeString": "tuple()"
                           }
                         },
-                        "id": 1363,
+                        "id": 1367,
                         "nodeType": "EmitStatement",
                         "src": "420:18:7"
                       }
@@ -1755,7 +1755,7 @@
               ]
             },
             "documentation": null,
-            "id": 1373,
+            "id": 1377,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -1763,15 +1763,15 @@
             "name": "logbool",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1356,
+              "id": 1360,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1353,
+                  "id": 1357,
                   "name": "s",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1373,
+                  "scope": 1377,
                   "src": "362:8:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1780,7 +1780,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 1352,
+                    "id": 1356,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "362:6:7",
@@ -1794,10 +1794,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 1355,
+                  "id": 1359,
                   "name": "b",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1373,
+                  "scope": 1377,
                   "src": "372:6:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1806,7 +1806,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 1354,
+                    "id": 1358,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "372:4:7",
@@ -1823,12 +1823,12 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 1357,
+              "id": 1361,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "389:0:7"
             },
-            "scope": 1392,
+            "scope": 1396,
             "src": "345:159:7",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1836,33 +1836,33 @@
           },
           {
             "body": {
-              "id": 1380,
+              "id": 1384,
               "nodeType": "Block",
               "src": "560:27:7",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1378,
+                    "id": 1382,
                     "name": "now",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 3889,
+                    "referencedDeclaration": 3893,
                     "src": "577:3:7",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 1377,
-                  "id": 1379,
+                  "functionReturnParameters": 1381,
+                  "id": 1383,
                   "nodeType": "Return",
                   "src": "570:10:7"
                 }
               ]
             },
             "documentation": null,
-            "id": 1381,
+            "id": 1385,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": true,
@@ -1870,22 +1870,22 @@
             "name": "nowtime",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1374,
+              "id": 1378,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "527:2:7"
             },
             "payable": false,
             "returnParameters": {
-              "id": 1377,
+              "id": 1381,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1376,
+                  "id": 1380,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1381,
+                  "scope": 1385,
                   "src": "551:7:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1894,7 +1894,7 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 1375,
+                    "id": 1379,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "551:7:7",
@@ -1909,7 +1909,7 @@
               ],
               "src": "550:9:7"
             },
-            "scope": 1392,
+            "scope": 1396,
             "src": "510:77:7",
             "stateMutability": "view",
             "superFunction": null,
@@ -1917,25 +1917,25 @@
           },
           {
             "body": {
-              "id": 1390,
+              "id": 1394,
               "nodeType": "Block",
               "src": "641:33:7",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 1388,
+                    "id": 1392,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
                       "argumentTypes": null,
-                      "id": 1386,
+                      "id": 1390,
                       "name": "unit_test",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1327,
+                      "referencedDeclaration": 1331,
                       "src": "651:9:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -1946,11 +1946,11 @@
                     "operator": "=",
                     "rightHandSide": {
                       "argumentTypes": null,
-                      "id": 1387,
+                      "id": 1391,
                       "name": "flag",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 1383,
+                      "referencedDeclaration": 1387,
                       "src": "663:4:7",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -1963,14 +1963,14 @@
                       "typeString": "bool"
                     }
                   },
-                  "id": 1389,
+                  "id": 1393,
                   "nodeType": "ExpressionStatement",
                   "src": "651:16:7"
                 }
               ]
             },
             "documentation": null,
-            "id": 1391,
+            "id": 1395,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -1978,15 +1978,15 @@
             "name": "enableUnitTest",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 1384,
+              "id": 1388,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 1383,
+                  "id": 1387,
                   "name": "flag",
                   "nodeType": "VariableDeclaration",
-                  "scope": 1391,
+                  "scope": 1395,
                   "src": "621:9:7",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1995,7 +1995,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 1382,
+                    "id": 1386,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "621:4:7",
@@ -2012,19 +2012,19 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 1385,
+              "id": 1389,
               "nodeType": "ParameterList",
               "parameters": [],
               "src": "641:0:7"
             },
-            "scope": 1392,
+            "scope": 1396,
             "src": "597:77:7",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "internal"
           }
         ],
-        "scope": 1393,
+        "scope": 1397,
         "src": "26:654:7"
       }
     ],
@@ -2036,5 +2036,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-09-05T10:51:01.673Z"
+  "updatedAt": "2018-09-06T02:54:23.594Z"
 }
