@@ -5,6 +5,18 @@
       <b-navbar-brand @click.capture="goHome" href="#">
         Neb-Blog
       </b-navbar-brand>
+
+      <div style="position: absolute;     margin-left: 130px;">
+        <router-link to="/testTronWeb">
+          testTronWeb&nbsp;&nbsp;&nbsp;&nbsp;
+        </router-link>
+        <router-link to="/testDinosaur">
+          testDinosaur&nbsp;&nbsp;&nbsp;&nbsp;
+        </router-link>
+        <router-link to="/testDinosaurTron">
+          testDinosaurTron
+        </router-link>
+      </div>
       
       <!-- 导航栏 -->
       <b-collapse is-nav id="nav_collapse" @click="toggleNav">
