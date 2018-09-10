@@ -11,13 +11,13 @@ module.exports = {
     config.resolve.alias.set('@', resolve('src'));
   },
   devServer: {
-    changeOrigin: true, // 是否启用跨域
-    open: process.platform === 'darwin',
+    // changeOrigin: true, // 是否启用跨域
+    // open: true,//process.platform === 'darwin',
     host: '0.0.0.0',
-    port: 5010,
-    https: false,
-    hotOnly: false,
-    proxy: null
+    port: 5110,
+    // https: false,
+    // hotOnly: false,
+    // proxy: null
     // before: app => {}
   },
   pluginOptions: {}

@@ -3,6 +3,9 @@ import Router from 'vue-router'
 const _import = require("./_import_" + process.env.NODE_ENV)
 console.log('-----------------------' + process.env.NODE_ENV)
 import Layout from '@/views/layout/Layout'
+import testTronWeb from '@/views/test/testTronWeb'
+import testDinosaur from '@/views/test/testDinosaur'
+import testDinosaurTron from '@/views/test/testDinosaurTron'
 
 Vue.use(Router)
 
@@ -72,6 +75,21 @@ export default new Router({
 					component: _import("tags/index")
 				}
 			]
+		},
+		{
+			path: '/testTronWeb',
+			name: 'testTronWeb',
+			component: testTronWeb
+		},
+		{
+			path: '/testDinosaur',
+			name: 'testDinosaur',
+			component: testDinosaur
+		},
+		{
+			path: '/testDinosaurTron',
+			name: 'testDinosaurTron',
+			component: testDinosaurTron
 		},
 	]
 })
