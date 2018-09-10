@@ -8,7 +8,7 @@
           <p>私钥 <input type="text" ref="contractNewPK" value="da146374a75310b9666e834ee4ad0866d6f4035967bfc76217c5a495fff9f0d0"/><br></p>
           <p> from-部署合约的账户地址 <input ref="newAbiFrom" type="text" value="TPL66VK2gCXNCD7EJg9pgJRfqcRazjhUZY"></p>
           <p> fee_limit 完成交易所消耗的最大fee  <input ref="newAbiFeeLimit" type="text" value="700000000000000"></p>
-          <p> call_value 每次调用合约花费的fee  <input ref="newAbiCallValue" type="text" value="0"></p>
+          <p> call_value 每次调用合约花费的fee  <input ref="newAbiCallValue" type="text" value="1"></p>
           <p> consume_user_resource_percent 指定的使用该合约用户的资源占比，是[0, 100]之间的整数。如果是0，则表示用户不会消耗资源。如果开发者资源消耗完了，才会完全使用用户的资源。<input ref="newAbiConsumeUserResourcePercent" type="text" value="0"></p>
 
           <p style="font-size:0.35rem">部署Jurassic</p>

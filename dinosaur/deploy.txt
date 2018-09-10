@@ -1,0 +1,30 @@
+Running migration: 1_initial_migration.js
+--network-- dev
+--gasLimit-- 7488896
+Saving artifacts...
+Running migration: 2_deploy_contracts.js
+**************CEO addr: 0xc7B5F6d0245339674ae4264E44173bC606881651
+  Deploying Jurassic...
+  ... 0x9f38bb45e91e274cd8240dbc5d560787593d40f2eab1c6c461f599a58c216ebb
+  Jurassic: 0xbaeff0d37668df9c7b1dabffc2782b9d7ada2fa4
+--------------------start deploy GeneticAlgorithm-------------
+  Deploying SaleDutchAuction...
+  Deploying GeneticAlgorithm...
+  ... 0x7d4607b03f5a6396a2cebcb8ad6d3fea259371bef6d6fc5130d0bdbf070091b1
+  ... 0x4b9dd3417a40d509f53572381cddb87ff1aa2905e4c200e4c460a73c78e98e9d
+  GeneticAlgorithm: 0x03a2710e09ae29b14c3c54fb34a041134e4cff3d
+  ... 0x1c9bb575101a4706c1822b8f9ba3f0966cb352676fa7c3ae8df35fe140659c29
+  SaleDutchAuction: 0x8fd03340b14d7ab8ad9aed79faa28680022974ac
+  Deploying SiringDutchAuction...
+  ... 0xd2f0ac9f39276e0d49f1f0042d4e547fb1a8dd22dc744504a70daff9bc6ead4f
+  ... 0x987e5ac6807efc74716f0a6a1510dbb559234ba19f3513c36e3329e79f1708d3
+************sale auction addr in jurassic: 0x8fd03340b14d7ab8ad9aed79faa28680022974ac
+  ... 0x8e7f63af45098d51500a983eb2dc0db07631deae7318b37a3eb9f3376020519b
+************genertic addr in jurassic: 0x03a2710e09ae29b14c3c54fb34a041134e4cff3d
+************jurassic addr in genetic algorithm: 0xbaeff0d37668df9c7b1dabffc2782b9d7ada2fa4
+  SiringDutchAuction: 0x1a88813f8b8d6943df393e9ebfc046a1a7cb214e
+Saving artifacts...
+  ... 0x6ec0352116ce2c0bb7a3336ab3bc577eb540c7236cd61ae006826b6cd5b1d8bc
+
+
+  private network tron: contract address: 41a972834a4d8b36cefb69d2618057ac22d0d0f59e
