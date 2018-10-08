@@ -7,26 +7,30 @@ nodeos -> 是eos的节点组件，在它上面负责交易，已经账户管理�
 
 2、与keosd和nodeos交互，
 
-cleos --wallet-url http://127.0.0.1:8899    // 与keosd交互 PW5JeuyRmkwz7QETYugzbc6FjoURPKGe1JQRD7Y9Q6tKUZxEiyBY8
+cleos --wallet-url http://127.0.0.1:8899    // 与keosd交互  PW5JYcwyFhe9VgzBXYdpePhF2nxdqmEuTjbvVPPbbJF9j8JLxAZPo
 
 cleos --wallet-url http://127.0.0.1:8887 -u    http://193.93.219.219:8888    get account aaaking35512 这里需要注意的是，我们在与nodeos交互时，必须显示声明keosd交互的wallet-url才行，且两个组件不能监听同一个端口。 ***
 
 cleos -u      http://193.93.219.219:8888      set contract aaaking35512 ../hello -p aaaking35512
-cleos -u  http://193.93.219.219:8888   push action aaaking35512 hi '["user"]'
+cleos -u  http://193.93.219.219:8888   push action aaaking35512 hi '["user"]' -p aaaking35512@owner
 
-2.1、 导入 eosio账户， 其eos地址私钥为 -> 5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3
+eosiocpp -o ./hello1.wast ./hello1.cpp
+eosiocpp -g ./hello1.abi ./hello1.cpp
+eosio-cpp -o hello.wasm Players.cpp --abigen
+
+2.1、 导入 eosio账户，
 
 3、基本操作
 
 	(1) 钱包相关：
 		cleos wallet create [--name walletname]
 		
-		cleos wallet import eos_privatekey  //导入eos地址 
+		cleos wallet import eos_privatekey  //导入eos地址
 
 		cleos wallet list
-		
+
 		cleos wallet keys
-		
+
 	(2) eos地址创建相关：
 		cleos create key    // 创建eos地址
 		
@@ -56,7 +60,6 @@ cleos -u  http://193.93.219.219:8888   push action aaaking35512 hi '["user"]'
 		
 	(5) 币数量查询：
 		cleos get currency balance 发币合约账户 用户 [币名]   // 币名不写则显示全部币	
-		
 
 附带一些docker的操作:
 
@@ -67,22 +70,29 @@ docker attach -t 容器名字
 
 docker exec -it 容器名字 bash   // 可以进入到容器运行的环境中进行操作。
 ```
-		
-		
-PW5JLX4Ydk2aAT25WEYtwmwwgcK6dVxGYdn4UnkB6Kq7wp263FLoA
-Private key: 5JREFz47gqBFmG1FV8iWiFRhFhqXa3jsnrF3TQLk1cLKXgFLh22
-Public key: EOS5pzh7ocMDb8UKojPtAVEsLFwgXgucYZFyLvj13FtAXMPgmRLFL
-
-Private key: 5JMtd2Afp3PL1SEnPcTjyoVyy3XWFfPZGAFL2frGp8hHxxf8izM
-Public key: EOS5Mixobba3mLZkG3hajXGJ5T5yp21MpbMjEG8P911VB3gT8ZaEG
 
 在启动nodeos时，添加参数：--filter-on "*"
 
-
-
-
-
-
+docker run \
+  --name nodeos -d -p 8888:8888 \
+  --network eosdev \
+  -v /tmp/eosio/work:/work \
+  -v /tmp/eosio/data:/mnt/dev/data \
+  -v /tmp/eosio/config:/mnt/dev/config \
+  eosio/eos-dev 
+/bin/bash -c \
+  "nodeos -e -p eosio \
+    --plugin eosio::producer_plugin \
+    --plugin eosio::history_plugin \
+    --plugin eosio::chain_api_plugin \
+    --plugin eosio::history_api_plugin \
+    --plugin eosio::http_plugin \
+    -d /mnt/dev/data \
+    --config-dir /mnt/dev/config \
+    --http-server-address=0.0.0.0:8888 \
+    --access-control-allow-origin=* \
+    --contracts-console \
+    --http-validate-host=false"
 
 http://jungle.cryptolions.io/#  测试网络
 https://github.com/EOSIO/eosjs  js库

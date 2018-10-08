@@ -1,3 +1,4 @@
 .idea/*
 ./webpack/node_modules/*
 delete1/nosecret/build/node_modules/*
+.vscode/*

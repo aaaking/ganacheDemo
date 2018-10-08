@@ -1,0 +1,122 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Mon Oct  8 13:29:31 2018",
+    "version": "eosio::abi/1.0",
+    "structs": [
+        {
+            "name": "add",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "user_name",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "getplayer",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "hi",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                }
+            ]
+        },
+        {
+            "name": "player",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account_name",
+                    "type": "uint64"
+                },
+                {
+                    "name": "user_name",
+                    "type": "string"
+                },
+                {
+                    "name": "level",
+                    "type": "uint64"
+                },
+                {
+                    "name": "health_points",
+                    "type": "uint64"
+                },
+                {
+                    "name": "energy_points",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "update",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "level",
+                    "type": "uint64"
+                },
+                {
+                    "name": "health_points",
+                    "type": "uint64"
+                },
+                {
+                    "name": "energy_points",
+                    "type": "uint64"
+                }
+            ]
+        }
+    ],
+    "types": [],
+    "actions": [
+        {
+            "name": "add",
+            "type": "add",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "getplayer",
+            "type": "getplayer",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "hi",
+            "type": "hi",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "update",
+            "type": "update",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "player",
+            "type": "player",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "ricardian_clauses": [],
+    "abi_extensions": []
+}
