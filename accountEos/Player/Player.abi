@@ -1,5 +1,5 @@
 {
-    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Mon Oct  8 13:29:31 2018",
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT Mon Oct  8 18:38:37 2018",
     "version": "eosio::abi/1.0",
     "structs": [
         {
@@ -13,6 +13,34 @@
                 {
                     "name": "user_name",
                     "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "addability",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "ability",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "additem",
+            "base": "",
+            "fields": [
+                {
+                    "name": "account",
+                    "type": "name"
+                },
+                {
+                    "name": "purchased_item",
+                    "type": "item"
                 }
             ]
         },
@@ -37,7 +65,37 @@
             ]
         },
         {
-            "name": "player",
+            "name": "item",
+            "base": "",
+            "fields": [
+                {
+                    "name": "item_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "name",
+                    "type": "string"
+                },
+                {
+                    "name": "power",
+                    "type": "uint64"
+                },
+                {
+                    "name": "health",
+                    "type": "uint64"
+                },
+                {
+                    "name": "ability",
+                    "type": "string"
+                },
+                {
+                    "name": "level_up",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "playerv2",
             "base": "",
             "fields": [
                 {
@@ -54,11 +112,19 @@
                 },
                 {
                     "name": "health_points",
-                    "type": "uint64"
+                    "type": "int64"
                 },
                 {
                     "name": "energy_points",
-                    "type": "uint64"
+                    "type": "int64"
+                },
+                {
+                    "name": "abilities",
+                    "type": "string[]"
+                },
+                {
+                    "name": "inventory",
+                    "type": "item[]"
                 }
             ]
         },
@@ -76,11 +142,11 @@
                 },
                 {
                     "name": "health_points",
-                    "type": "uint64"
+                    "type": "int64"
                 },
                 {
                     "name": "energy_points",
-                    "type": "uint64"
+                    "type": "int64"
                 }
             ]
         }
@@ -90,6 +156,16 @@
         {
             "name": "add",
             "type": "add",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "addability",
+            "type": "addability",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "additem",
+            "type": "additem",
             "ricardian_contract": ""
         },
         {
@@ -110,8 +186,8 @@
     ],
     "tables": [
         {
-            "name": "player",
-            "type": "player",
+            "name": "playerv2",
+            "type": "playerv2",
             "index_type": "i64",
             "key_names": [],
             "key_types": []

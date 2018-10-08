@@ -4,6 +4,9 @@
         "iterator": "cpp",
         "string": "cpp",
         "string_view": "cpp",
-        "typeinfo": "cpp"
+        "typeinfo": "cpp",
+        "__string": "cpp",
+        "algorithm": "cpp",
+        "stdexcept": "cpp"
     }
 }
