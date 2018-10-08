@@ -80,7 +80,16 @@ namespace DesertOasis {
                 print(curPlayer.abilities.at(i).c_str(), "---");
             }
         } else {
-            print("No abilities");
+            print("No abilities-------");
+        }
+        if (curPlayer.inventory.size() > 0) {
+            print(" Items: ");
+            for (uint32_t i = 0; i < curPlayer.inventory.size(); i++) {
+                item currentItem = curPlayer.inventory.at(i);
+                print(currentItem.item_id, " == ", currentItem.name.c_str(), " == ", currentItem.ability.c_str(), " == ");
+            }
+        } else {
+            print(" Empty inventory");
         }
     }
 
@@ -89,5 +98,28 @@ namespace DesertOasis {
     }
 
     void Player::additem(const account_name account, item purchased_item) {
+        playerIndex players(_self, _self);
+        auto iterator = players.find(account);
+        eosio_assert(iterator != players.end(), "player for this account does not exists-----");
+        players.modify(iterator, account, [&](auto& player){
+            player.health_points += purchased_item.health;
+            player.energy_points += purchased_item.power;
+            player.level += purchased_item.level_up;
+            player.abilities.push_back(purchased_item.ability);
+            player.inventory.push_back(item{
+                purchased_item.item_id,
+                purchased_item.name,
+                purchased_item.power,
+                purchased_item.health,
+                purchased_item.ability,
+                purchased_item.level_up
+            });
+        });
+        print("Item Id: ", purchased_item.item_id);
+        print(" | Name: ", purchased_item.name.c_str());
+        print(" | Power: ", purchased_item.power); 
+        print(" | Health: ", purchased_item.health);
+        print(" | Ability: ", purchased_item.ability.c_str());
+        print(" | Level up: ", purchased_item.level_up);
     }
 }
