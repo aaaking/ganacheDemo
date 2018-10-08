@@ -1,7 +1,6 @@
 #include "Players.hpp"
-
 // 木香花、太阳花、牡丹吊兰、四季海棠
-
+// https://infinitexlabs.com/blog/
 namespace Oasis {
     using namespace eosio;
     using std::string;
