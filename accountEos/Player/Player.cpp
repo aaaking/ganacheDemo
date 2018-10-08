@@ -70,10 +70,10 @@ namespace DesertOasis {
         auto iterator = players.find(account);
         eosio_assert(iterator != players.end(), "Player for account not found--function--getplayer");
         auto curPlayer = players.get(account);
-        print("username: ", curPlayer.user_name.c_str());
-        print("Level: ", curPlayer.level);
-        print("Health: ", curPlayer.health_points);
-        print("Energy: ", curPlayer.energy_points);
+        print("username: ", curPlayer.user_name.c_str(), "---");
+        print("Level: ", curPlayer.level, "---");
+        print("Health: ", curPlayer.health_points, "---");
+        print("Energy: ", curPlayer.energy_points, "---");
         if (curPlayer.abilities.size() > 0) {
             print("All abilities: ");
             for (uint32_t i = 0; i < curPlayer.abilities.size(); i++) {
