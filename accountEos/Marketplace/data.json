@@ -1,0 +1,32 @@
+{
+  "threshold": 1,
+  "keys": [
+    {
+      "key": "EOS86Tbnq2ixUTzJqGkHgK834WesrvpTBvozAHaRqB8PvMvsXsHXk",
+      "weight": 1
+    }
+  ],
+  "accounts": [
+    {
+      "permission": {
+        "actor": "aaaking35512",
+        "permission": "eosio.code"
+      },
+      "weight": 1
+    },
+    {
+      "permission": {
+        "actor": "aaaking35513",
+        "permission": "eosio.code"
+      },
+      "weight": 1
+    },
+    {
+      "permission": {
+        "actor": "aaaking35514",
+        "permission": "eosio.code"
+      },
+      "weight": 1
+    }
+  ]
+}
