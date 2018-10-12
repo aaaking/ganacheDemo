@@ -1,5 +1,5 @@
 #include "Player.hpp"
-// 木香花、太阳花、牡丹吊兰、四季海棠
+// 木香花、太阳花、牡丹吊兰、四季海棠、龙船花、茴香
 // https://infinitexlabs.com/blog/
 // https://steemit.com/eos/@jd3/understanding-the-eosio-token-contract
 /**
