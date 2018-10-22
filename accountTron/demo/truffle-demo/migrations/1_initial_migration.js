@@ -1,9 +1,9 @@
-const UPDATE_GENETIC_ONLY = true;
+const UPDATE_GENETIC_ONLY = false;
 var Migrations = artifacts.require("./Migrations.sol");
 var Utils = artifacts.require("./libs/Utils.sol");
 
 module.exports = function (deployer, network, accounts) {
-
+  // web3.personal.unlockAccount("0x4BaBf11D785922DDDb51076AC0030FDC41778607", "12345678", 3600)
   if (UPDATE_GENETIC_ONLY) {
     console.log("\n###################start update Genetic Algorithm only#####################\n");
     Migrations.deployed().then(async instance => {
