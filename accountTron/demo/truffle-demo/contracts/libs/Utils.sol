@@ -39,6 +39,6 @@ contract Utils {
     }
 
     function utilAlgorithm() public pure returns (uint) {
-        return 6666666;
+        return 111123123;
     }
 }
