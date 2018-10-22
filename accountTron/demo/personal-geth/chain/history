@@ -1,0 +1,8 @@
+web3.eth.accounts
+web3.eth.getBalance('0x6f2a32dab13e8eefad84e25352eeb5d4213cf1c0')
+miner.start(1)
+web3.eth.getBalance('0x6f2a32dab13e8eefad84e25352eeb5d4213cf1c0')
+acc0 = web3.eth.accounts[0]
+web3.eth.getBalance(acc0)
+acc0
+rpcport
