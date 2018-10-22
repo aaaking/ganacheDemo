@@ -11,7 +11,9 @@ truffle develop //进入控制台
 
 
 编译项目
-$ truffle compile //编译项目
+$ truffle compile --all//编译项目
+
+truffle migrate --reset --network rinkeby
 
 $ truffle deploy
 启动服务

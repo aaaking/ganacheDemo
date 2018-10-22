@@ -34,6 +34,10 @@ contract Migrations is Users {
     return Utils.bytesToUint(_data);
   }
 
+  function utilAlgorithm() public pure returns(uint) {
+    return Utils.utilAlgorithm();
+  }
+
   function getMigration() public view returns(uint) {
     return last_completed_migration;
   }

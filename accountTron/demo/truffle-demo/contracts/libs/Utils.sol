@@ -33,4 +33,8 @@ library Utils {
         }
         return string(bytesStringTrimmed);
     }
+
+    function utilAlgorithm() public pure returns (uint) {
+        return 221;
+    }
 }
