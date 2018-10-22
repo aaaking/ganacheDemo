@@ -43,7 +43,7 @@ contract Users {
         return true;
     }
 
-    function getName(uint id) public view returns (string) {
-        return Utils.bytesToString(users[id].name);
+    function getName() public pure returns (string) {
+        return "getName";
     }
 }

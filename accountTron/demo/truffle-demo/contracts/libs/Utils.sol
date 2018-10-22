@@ -1,7 +1,11 @@
 pragma solidity ^0.4.23;
 
-library Utils {
-    function bytesToUint(bytes _data) internal pure returns (uint) {
+contract Utils {
+    address public jurassicAddr;
+    constructor(address _jurassic) public {
+        jurassicAddr = _jurassic;
+    }
+    function bytesToUint(bytes _data) public pure returns (uint) {
         uint t = 0;
         uint d;
         for(uint i = 4; i < _data.length; i++) {
@@ -17,7 +21,7 @@ library Utils {
         return t;
     }
 
-    function bytesToString(bytes32 x) internal pure returns (string) {
+    function bytesToString(bytes32 x) public pure returns (string) {
         bytes memory bytesString = new bytes(32);
         uint charCount = 0;
         for (uint j = 0; j < 32; j++) {
@@ -35,6 +39,6 @@ library Utils {
     }
 
     function utilAlgorithm() public pure returns (uint) {
-        return 221;
+        return 6666666;
     }
 }

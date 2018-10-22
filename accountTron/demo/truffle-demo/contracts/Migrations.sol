@@ -4,6 +4,7 @@ import './libs/Utils.sol';
 import './user/User.sol';
 
 contract Migrations is Users {
+  Utils public utils;
   address public owner;
   uint public last_completed_migration;
 
@@ -12,6 +13,11 @@ contract Migrations is Users {
   constructor() public {
     owner = msg.sender;
   }
+
+  function setGeneticAlgorithmAddress(address _addr) public {
+        Utils candidateContract = Utils(_addr);
+        utils = candidateContract;
+    }
 
   function set(uint256 key, uint256 value) public {
     log0("xxs");
@@ -30,12 +36,13 @@ contract Migrations is Users {
     return name;
   }
 
-  function useUtil(bytes _data) public pure returns(uint) {
-    return Utils.bytesToUint(_data);
+  function useUtil(bytes _data) public view returns(uint) {
+    uint va = utils.bytesToUint(_data);
+    return va;
   }
 
-  function utilAlgorithm() public pure returns(uint) {
-    return Utils.utilAlgorithm();
+  function utilAlgorithm() public view returns(uint) {
+    return utils.utilAlgorithm();
   }
 
   function getMigration() public view returns(uint) {
